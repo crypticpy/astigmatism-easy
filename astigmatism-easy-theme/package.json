@@ -1,0 +1,46 @@
+{
+  "name": "astigmatism-easy",
+  "displayName": "AstigmatismEasy",
+  "description": "A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline",
+  "version": "1.0.0",
+  "publisher": "Christopher Collins",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark theme",
+    "accessibility",
+    "astigmatism",
+    "eye strain",
+    "vision",
+    "night mode",
+    "low light",
+    "night vision",
+    "color theme",
+    "mini led",
+    "oled"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#282828",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crypticpy/astigmatism-easy"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "AstigmatismEasy",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-color-theme.json"
+      }
+    ]
+  },
+  "license": "MIT"
+}
