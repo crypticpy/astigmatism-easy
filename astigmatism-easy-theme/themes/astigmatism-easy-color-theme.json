@@ -66,24 +66,25 @@
     "editor.foreground": "#EBDBB2",
     // Enhanced line numbers with more visible active line
     "editorLineNumber.foreground": "#A8998480",
-    "editorLineNumber.activeForeground": "#EBDBB2",
+    "editorLineNumber.activeForeground": "#FE8019",
     // Enhanced editor cursor (block style works well with orange)
     "editorCursor.foreground": "#FE8019",
     "editorCursor.background": "#282828",
     "editor.selectionBackground": "#50494580",
     "editor.selectionHighlightBackground": "#3C383680",
+    "editorWhitespace.foreground": "#50494550",
 
     // Enhanced line highlighting with improved visibility
-    "editor.lineHighlightBackground": "#3C3836",
+    "editor.lineHighlightBackground": "#FE801915",
     "editor.lineHighlightBorder": "#FE801940",
 
     // Error and warning indicators with reduced opacity
     "editorError.foreground": "#FB493490",
     "editorWarning.foreground": "#FABD2F90",
-    "editorInfo.foreground": "#83A59890",
+    "editorInfo.foreground": "#B8BB2690",
     "editorError.border": "#FB493430",
     "editorWarning.border": "#FABD2F30",
-    "editorInfo.border": "#83A59830",
+    "editorInfo.border": "#B8BB2630",
 
     // Enhanced debugging experience
     "editor.stackFrameHighlightBackground": "#B8BB2622",
@@ -94,10 +95,10 @@
     "debugIcon.disconnectForeground": "#FE8019",
     "debugIcon.pauseForeground": "#FABD2F",
     "debugIcon.continueForeground": "#B8BB26",
-    "debugIcon.stepOverForeground": "#83A598",
+    "debugIcon.stepOverForeground": "#D3869B",
     "debugIcon.stepIntoForeground": "#FABD2F",
     "debugIcon.stepOutForeground": "#D3869B",
-    "debugIcon.restartForeground": "#8EC07C",
+    "debugIcon.restartForeground": "#d3748d",
     "debugView.exceptionLabelBackground": "#FB493422",
     "debugView.exceptionLabelForeground": "#EBDBB2",
     "debugView.stateLabelBackground": "#50494570",
@@ -133,18 +134,19 @@
     "editorHoverWidget.highlightForeground": "#FE8019",
 
     // Improved inlay hints for better readability
-    "editorInlayHint.foreground": "#A8998480",
+    "editorInlayHint.foreground": "#83A59860",
     "editorInlayHint.background": "#28282800",
     "editorInlayHint.typeForeground": "#83A59880",
-    "editorInlayHint.parameterForeground": "#8EC07C80",
+    "editorInlayHint.parameterForeground": "#8EC07C60",
 
-    // UI elements with blue accents for side elements not focused on for long
+    // This reduces blue wavelength impact while maintaining clear visual hierarchy
+    // Amber color creates less halation on OLED/Mini LED than blue-teal
     "activityBar.background": "#282828",
     "activityBar.foreground": "#EBDBB2",
     "activityBar.inactiveForeground": "#A8998480",
-    "activityBar.activeBorder": "#83A598",
+    "activityBar.activeBorder": "#D79921",
     "activityBar.activeBackground": "#3C383660",
-    "activityBarBadge.background": "#83A598",
+    "activityBarBadge.background": "#D79921",
     "activityBarBadge.foreground": "#282828",
 
     "sideBar.background": "#282828",
@@ -152,7 +154,7 @@
     "sideBarTitle.foreground": "#EBDBB2",
     "sideBarSectionHeader.background": "#3C3836",
     "sideBarSectionHeader.foreground": "#EBDBB2",
-    "sideBarSectionHeader.border": "#83A59850",
+    "sideBarSectionHeader.border": "#D7992150",
 
     // Enhanced list highlighting with blue accents
     "list.activeSelectionBackground": "#504945",
@@ -163,8 +165,8 @@
     "list.hoverForeground": "#EBDBB2",
     "list.focusBackground": "#50494580",
     "list.focusForeground": "#EBDBB2",
-    "list.focusOutline": "#83A59860",
-    "list.highlightForeground": "#83A598",
+    "list.focusOutline": "#D7992160",
+    "list.highlightForeground": "#D79921",
     "list.errorForeground": "#FB493490",
     "list.warningForeground": "#FABD2F90",
 
@@ -178,7 +180,7 @@
     "statusBarItem.prominentBackground": "#50494570",
     "statusBarItem.prominentForeground": "#EBDBB2",
     "statusBarItem.prominentHoverBackground": "#50494590",
-    "statusBarItem.remoteBackground": "#8EC07C80",
+    "statusBarItem.remoteBackground": "#B8BB2680",
     "statusBarItem.remoteForeground": "#282828",
     "statusBarItem.errorBackground": "#FB493460",
     "statusBarItem.errorForeground": "#EBDBB2",
@@ -192,12 +194,13 @@
     "titleBar.inactiveForeground": "#A89984",
     "titleBar.border": "#28282800",
 
-    // Tab improvements with blue accents for better visibility
+    // Tab improvements warm orange for better visibility
+    // Prevents blooming effect on Mini LED around bright UI elements
     "tab.activeBackground": "#3C3836",
     "tab.activeForeground": "#EBDBB2",
     "tab.inactiveBackground": "#282828",
     "tab.inactiveForeground": "#A89984",
-    "tab.activeBorderTop": "#2fc58ba0",
+    "tab.activeBorderTop": "#fe4719",
     "tab.activeBorder": "#3C3836",
     "tab.unfocusedActiveBorder": "#50494550",
     "tab.unfocusedActiveBorderTop": "#50494550",
@@ -205,7 +208,12 @@
     "tab.unfocusedInactiveForeground": "#A8998480",
     "tab.hoverBackground": "#3C383680",
     "tab.hoverForeground": "#EBDBB2",
-    "tab.hoverBorder": "#2fc5c560",
+    "tab.hoverBorder": "#c5502f60",
+
+    // Enhanced problems view with blue accents for better visibility
+    "problemsErrorIcon.foreground": "#fe4719",
+    "problemsWarningIcon.foreground": "#fe8019e8",
+    "problemsInfoIcon.foreground": "#fef319",
 
     // Enhanced breadcrumbs for better file navigation
     "breadcrumb.background": "#282828",
@@ -249,10 +257,25 @@
     "diffEditorOverview.insertedForeground": "#B8BB26AA",
     "diffEditorOverview.removedForeground": "#FB4934AA",
 
-    // Focus indicators with blue highlights for elements viewed briefly
-    "focusBorder": "#83A598A0",
+    // Overview ruler with better visibility
+    "editorOverviewRuler.border": "#504945", // Warm gray
+    "editorOverviewRuler.findMatchForeground": "#FABD2F60", // Changed to yellow
+    "editorOverviewRuler.rangeHighlightForeground": "#FE801960", // Already orange
+    "editorOverviewRuler.selectionHighlightForeground": "#FABD2F40", // Changed to yellow
+    "editorOverviewRuler.wordHighlightForeground": "#D7992140", // Changed to amber
+    "editorOverviewRuler.wordHighlightStrongForeground": "#D7992160", // Changed to amber
+    "editorOverviewRuler.modifiedForeground": "#FABD2F90", // Already yellow
+    "editorOverviewRuler.addedForeground": "#B8BB2690", // Keep olive green
+    "editorOverviewRuler.deletedForeground": "#FB493490", // Keep red
+    "editorOverviewRuler.errorForeground": "#FB493470", // Keep red
+    "editorOverviewRuler.warningForeground": "#FABD2F70", // Keep yellow
+    "editorOverviewRuler.infoForeground": "#B8BB2670", // Changed from blue to olive green
+    "editorOverviewRuler.bracketMatchForeground": "#FABD2F90", // Changed to yellow
+
+    // Focus indicators with yellow highlights for elements viewed briefly
+    "focusBorder": "#FE8019",
     "contrastBorder": "#50494540",
-    "contrastActiveBorder": "#83A59870",
+    "contrastActiveBorder": "#e5f251",
 
     // Simplified terminal colors that work reliably
     "terminal.background": "#282828",
@@ -269,24 +292,24 @@
     "terminal.ansiYellow": "#FABD2F",
     "terminal.ansiBlue": "#83A598",
     "terminal.ansiMagenta": "#D3869B",
-    "terminal.ansiCyan": "#8EC07C",
+    "terminal.ansiCyan": "#9ec07c",
     "terminal.ansiWhite": "#EBDBB2",
     "terminal.ansiBrightBlack": "#928374",
     "terminal.ansiBrightRed": "#FB4934",
     "terminal.ansiBrightGreen": "#B8BB26",
-    "terminal.ansiBrightYellow": "#FABD2F",
+    "terminal.ansiBrightYellow": "#FABD2FfC",
     "terminal.ansiBrightBlue": "#83A598",
     "terminal.ansiBrightMagenta": "#D3869B",
-    "terminal.ansiBrightCyan": "#8EC07C",
+    "terminal.ansiBrightCyan": "#bcc268",
     "terminal.ansiBrightWhite": "#EBDBB2",
 
     // Bracket pair colorization with optimized saturation
-    "editorBracketHighlight.foreground1": "#8EC07CD0",
+    "editorBracketHighlight.foreground1": "#98971A",
     "editorBracketHighlight.foreground2": "#D3869BD0",
     "editorBracketHighlight.foreground3": "#FABD2FD0",
     "editorBracketHighlight.foreground4": "#FB4934D0",
-    "editorBracketHighlight.foreground5": "#83A598D0",
-    "editorBracketHighlight.foreground6": "#B8BB26D0",
+    "editorBracketHighlight.foreground5": "#d7d721d0",
+    "editorBracketHighlight.foreground6": "#bb7526d0",
     "editorBracketHighlight.unexpectedBracket.foreground": "#FB4934",
     "editorBracketMatch.background": "#FABD2F20",
     "editorBracketMatch.border": "#FABD2F40",
@@ -344,9 +367,9 @@
     "scrollbar.shadow": "#28282830",
 
     // Enhanced badges, progress bars with blue for UI elements
-    "badge.background": "#83A598",
+    "badge.background": "#B8BB26",
     "badge.foreground": "#282828",
-    "progressBar.background": "#83A598",
+    "progressBar.background": "#B8BB26",
 
     // Enhanced minimap for better peripheral vision
     "minimap.background": "#28282880",
@@ -382,30 +405,32 @@
     "notebook.outputContainerBackgroundColor": "#32302f",
     "notebook.outputContainerBorderColor": "#504945",
 
-    // Find/search highlighting with blue accents for temporary focus elements
-    "editor.findMatchBackground": "#83A59830",
-    "editor.findMatchHighlightBackground": "#83A59820",
+    // Search highlighting
+    // Yellow creates less fringing on high-contrast displays
+    // Subtle opacity preserved to prevent harsh edges on OLED
+    "editor.findMatchBackground": "#FABD2F30",
+    "editor.findMatchHighlightBackground": "#FABD2F20",
     "editor.findRangeHighlightBackground": "#50494520",
     "editor.hoverHighlightBackground": "#50494530",
     "editor.wordHighlightBackground": "#50494540",
     "editor.wordHighlightStrongBackground": "#50494550",
-    "editor.findMatchBorder": "#83A59880",
-    "editor.findMatchHighlightBorder": "#83A59860",
+    "editor.findMatchBorder": "#fadf2f70",
+    "editor.findMatchHighlightBorder": "#fae92f60",
 
-    // Symbol highlighting with blue accents for better visibility
-    "editor.symbolHighlightBackground": "#83A59830",
-    "editor.symbolHighlightBorder": "#83A59870",
+    // Symbol highlighting to compliment the yellow search highlighting
+    "editor.symbolHighlightBackground": "#fae62f30",
+    "editor.symbolHighlightBorder": "#fadf2f70",
 
-    // Enhanced peek view with blue accents for temporary viewing
-    "peekView.border": "#69a89080",
+    // Peek view - Consistent with search highlighting
+    "peekView.border": "#D7992180",
     "peekViewEditor.background": "#282828",
-    "peekViewEditor.matchHighlightBackground": "#83A59830",
-    "peekViewEditor.matchHighlightBorder": "#83A59860",
+    "peekViewEditor.matchHighlightBackground": "#FABD2F30",
+    "peekViewEditor.matchHighlightBorder": "#FABD2F60",
     "peekViewEditorGutter.background": "#282828",
     "peekViewResult.background": "#3C3836",
     "peekViewResult.fileForeground": "#EBDBB2",
     "peekViewResult.lineForeground": "#EBDBB2B0",
-    "peekViewResult.matchHighlightBackground": "#83A59840",
+    "peekViewResult.matchHighlightBackground": "#FABD2F40",
     "peekViewResult.selectionBackground": "#504945",
     "peekViewResult.selectionForeground": "#EBDBB2",
     "peekViewTitle.background": "#3C3836",
@@ -419,8 +444,18 @@
     // Non-color blind version specific settings
 
     // Subtle indent guides
-    "editorIndentGuide.activeBackground1": "#FE801940",
-    "editorIndentGuide.background1": "#50494530"
+    "editorIndentGuide.activeBackground1": "#FE8019E0",
+    "editorIndentGuide.activeBackground2": "#FE8019c0",
+    "editorIndentGuide.activeBackground3": "#FE8019a0",
+    "editorIndentGuide.activeBackground4": "#FE801980",
+    "editorIndentGuide.activeBackground5": "#FE801960",
+    "editorIndentGuide.activeBackground6": "#FE801940",
+    "editorIndentGuide.background1": "#50494570",
+    "editorIndentGuide.background2": "#50494560",
+    "editorIndentGuide.background3": "#50494550",
+    "editorIndentGuide.background4": "#50494540",
+    "editorIndentGuide.background5": "#50494530",
+    "editorIndentGuide.background6": "#50494520"
   },
 
   // Token colors with expanded language support
