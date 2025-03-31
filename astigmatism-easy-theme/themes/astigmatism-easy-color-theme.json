@@ -1,109 +1,83 @@
+// START OF FILE astigmatism-easy-warm-final.json
 {
-  "name": "AstigmatismEasy",
+  "name": "AstigmatismEasy Warm", // Final name suggestion
   "type": "dark",
   "semanticHighlighting": true,
   "semanticTokenColors": {
-    "parameter": {
-      "foreground": "#EBDBB2",
-      "italic": true
-    },
-    "property": { "foreground": "#D3869B" },
-    "variable.readonly": {
-      "foreground": "#D3869B",
-      "italic": true
-    },
-    "type.defaultLibrary": {
-      "foreground": "#FABD2F",
-      "bold": true
-    },
-    "class": { "foreground": "#FABD2F" },
-    "enum": { "foreground": "#FABD2F" },
-    "interface": {
-      "foreground": "#FABD2F",
-      "italic": true
-    },
-    "function.defaultLibrary": {
-      "foreground": "#B8BB26",
-      "bold": true
-    },
-    "method": { "foreground": "#B8BB26" },
-    "macro": {
-      "foreground": "#FB4934",
-      "bold": true
-    },
-    "comment.documentation": { "foreground": "#BDAE93" },
-    "namespace": {
-      "foreground": "#FABD2F",
-      "italic": true
-    },
-    // Enhanced semantic token colors for better language support
-    "decorator": {
-      "foreground": "#FB4934",
-      "italic": true
-    },
-    "typeParameter": {
-      "foreground": "#D3869B",
-      "italic": true
-    },
-    "enumMember": {
-      "foreground": "#8EC07C"
-    },
-    "event": {
-      "foreground": "#FE8019",
-      "italic": true
-    },
-    "modifier": {
-      "foreground": "#FB4934",
-      "bold": true
-    },
-    "regexp": {
-      "foreground": "#D3869B",
-      "italic": true
-    }
+    // Semantic Highlighting provides more context-aware coloring
+    "parameter": { "foreground": "#EBDBB2", "italic": true }, // Default text, italic
+    "property": { "foreground": "#D3869B" }, // Mauve for properties/fields
+    "variable.readonly": { "foreground": "#D3869B", "italic": true }, // Mauve italic for readonly/const variables
+    "type.defaultLibrary": { "foreground": "#FABD2F", "bold": true }, // Bold Yellow for built-in types
+    "class": { "foreground": "#FABD2F" }, // Yellow for classes
+    "enum": { "foreground": "#FABD2F" }, // Yellow for enums
+    "interface": { "foreground": "#FABD2F", "italic": true }, // Italic Yellow for interfaces
+    "function.defaultLibrary": { "foreground": "#B8BB26", "bold": true }, // Bold Olive Green for built-in functions
+    "method": { "foreground": "#B8BB26" }, // Olive Green for methods/functions
+    "macro": { "foreground": "#FB4934", "bold": true }, // Bold Red for macros
+    "comment.documentation": { "foreground": "#BDAE93", "italic": true }, // Match regular comments
+    "namespace": { "foreground": "#FABD2F", "italic": true }, // Italic Yellow for namespaces/modules
+    "decorator": { "foreground": "#FB4934", "italic": true }, // Italic Red for decorators/annotations
+    "typeParameter": { "foreground": "#D3869B", "italic": true }, // Italic Mauve for generic type parameters
+    "enumMember": { "foreground": "#8EC07C" }, // Aqua/Green for enum members (often like constants)
+    "event": { "foreground": "#FE8019", "italic": true }, // Italic Orange for events
+    "modifier": { "foreground": "#FB4934", "bold": true }, // Bold Red for access/storage modifiers
+    "regexp": { "foreground": "#D3869B", "italic": true } // Italic Mauve for regular expressions
   },
   "colors": {
-    // Base editor colors with thin orange dotted selection lines
+    // --- Base Editor Colors ---
+    // Rationale: Warm beige on dark warm gray reduces contrast harshness & blue light.
     "editor.foreground": "#EBDBB2",
-    // Enhanced line numbers with more visible active line
-    "editorLineNumber.foreground": "#A8998480",
-    "editorLineNumber.activeForeground": "#FE8019",
-    // Enhanced editor cursor (block style works well with orange)
-    "editorCursor.foreground": "#FE8019",
-    "editorCursor.background": "#282828",
-    "editor.selectionBackground": "#50494580",
-    "editor.selectionHighlightBackground": "#3C383680",
-    "editorWhitespace.foreground": "#50494550",
+    "editor.background": "#282828F8", // Base background, slightly transparent for OLED smoothness
+    "editorGutter.background": "#28282800", // Transparent gutter for seamless look
+    "editorWhitespace.foreground": "#50494550", // Subtle gray whitespace markers
 
-    // Enhanced line highlighting with improved visibility
+    // Line Numbers: Orange active line number for strong focus without brightness.
+    "editorLineNumber.foreground": "#A8998480", // Muted gray/brown inactive
+    "editorLineNumber.activeForeground": "#FE8019", // Orange active
+
+    // Cursor: Visible Orange block cursor
+    "editorCursor.foreground": "#FE8019",
+    "editorCursor.background": "#282828", // Match background for block cursor visibility
+
+    // Selection: Subtle warm grays, semi-transparent to maintain text visibility.
+    "editor.selectionBackground": "#50494580",
+    "editor.selectionHighlightBackground": "#3C383680", // For occurrences of selection
+
+    // Line Highlight: Very subtle orange tint background, subtle orange border.
     "editor.lineHighlightBackground": "#FE801915",
     "editor.lineHighlightBorder": "#FE801940",
 
-    // Error and warning indicators with reduced opacity
+    // Diagnostics: Red/Yellow/Olive Green - avoiding blue for info state.
+    // Rationale: Using warmer Olive Green for Info reduces blue light compared to typical blue. Opacity softens intensity.
     "editorError.foreground": "#FB493490",
     "editorWarning.foreground": "#FABD2F90",
-    "editorInfo.foreground": "#B8BB2690",
+    "editorInfo.foreground": "#B8BB2690", // Olive Green for Info
     "editorError.border": "#FB493430",
     "editorWarning.border": "#FABD2F30",
     "editorInfo.border": "#B8BB2630",
 
-    // Enhanced debugging experience
-    "editor.stackFrameHighlightBackground": "#B8BB2622",
-    "editor.focusedStackFrameHighlightBackground": "#FABD2F22",
+    // --- Debugging ---
+    // Uses the core warm palette for icons and states. Mauve used for neutral step actions.
+    "editor.stackFrameHighlightBackground": "#B8BB2622", // Subtle green highlight
+    "editor.focusedStackFrameHighlightBackground": "#FABD2F22", // Subtle yellow highlight
     "debugIcon.breakpointForeground": "#FB4934",
+    "debugIcon.breakpointDisabledForeground": "#FB493480",
+    "debugIcon.breakpointUnverifiedForeground": "#A89984",
     "debugIcon.startForeground": "#B8BB26",
     "debugIcon.stopForeground": "#FB4934",
     "debugIcon.disconnectForeground": "#FE8019",
     "debugIcon.pauseForeground": "#FABD2F",
     "debugIcon.continueForeground": "#B8BB26",
-    "debugIcon.stepOverForeground": "#D3869B",
-    "debugIcon.stepIntoForeground": "#FABD2F",
-    "debugIcon.stepOutForeground": "#D3869B",
-    "debugIcon.restartForeground": "#d3748d",
+    "debugIcon.stepOverForeground": "#D3869B", // Mauve
+    "debugIcon.stepIntoForeground": "#FABD2F", // Yellow
+    "debugIcon.stepOutForeground": "#D3869B", // Mauve
+    "debugIcon.restartForeground": "#D3869B", // Mauve
     "debugView.exceptionLabelBackground": "#FB493422",
     "debugView.exceptionLabelForeground": "#EBDBB2",
     "debugView.stateLabelBackground": "#50494570",
     "debugView.stateLabelForeground": "#EBDBB2",
-    "debugView.valueChangedHighlight": "#FABD2F60",
+    "debugView.valueChangedHighlight": "#FABD2F60", // Yellow flash for changed values
     "debugTokenExpression.name": "#EBDBB2",
     "debugTokenExpression.value": "#8EC07C",
     "debugTokenExpression.string": "#8EC07C",
@@ -111,272 +85,283 @@
     "debugTokenExpression.number": "#D3869B",
     "debugTokenExpression.error": "#FB4934",
 
-    // Editor widgets and popups with improved contrast
+    // --- Widgets (Suggest, Hover, Parameter Hints) ---
+    // Consistent dark backgrounds, orange highlights.
     "editorWidget.background": "#3C3836",
     "editorWidget.foreground": "#EBDBB2",
     "editorWidget.border": "#504945",
-    "editorWidget.resizeBorder": "#FE801940",
-
-    // Improved suggest widget with better focus indicators
+    "editorWidget.resizeBorder": "#FE801940", // Subtle orange resize handle
     "editorSuggestWidget.background": "#3C3836",
     "editorSuggestWidget.foreground": "#EBDBB2",
-    "editorSuggestWidget.highlightForeground": "#FE8019",
-    "editorSuggestWidget.selectedBackground": "#504945",
-    "editorSuggestWidget.focusHighlightForeground": "#FABD2F",
+    "editorSuggestWidget.highlightForeground": "#FE8019", // Orange for matching text
+    "editorSuggestWidget.selectedBackground": "#504945", // Mid-gray for selected item
+    "editorSuggestWidget.focusHighlightForeground": "#FABD2F", // Yellow if focused match?
     "editorSuggestWidget.border": "#50494580",
-    "editorSuggestWidget.selectedIconForeground": "#FE8019",
-
-    // Enhanced hover widget
+    "editorSuggestWidget.selectedIconForeground": "#FE8019", // Icon color matches highlight
     "editorHoverWidget.background": "#3C3836",
     "editorHoverWidget.foreground": "#EBDBB2",
     "editorHoverWidget.border": "#504945",
-    "editorHoverWidget.statusBarBackground": "#282828",
+    "editorHoverWidget.statusBarBackground": "#282828", // Matches main background
     "editorHoverWidget.highlightForeground": "#FE8019",
+    "editorParameterHint.foreground": "#A89984", // Muted text for parameter hints popup
+    "editorParameterHint.background": "#3C3836",
+    "editorParameterHint.highlightForeground": "#FE8019",
 
-    // Improved inlay hints for better readability
-    "editorInlayHint.foreground": "#83A59860",
-    "editorInlayHint.background": "#28282800",
-    "editorInlayHint.typeForeground": "#83A59880",
-    "editorInlayHint.parameterForeground": "#8EC07C60",
+    // Inlay Hints: Replaced subtle blue with muted gray/brown for strict blue avoidance.
+    // Rationale: Eliminates blue light from hints, relying on subtle contrast and positioning.
+    "editorInlayHint.foreground": "#A8998470", // Muted gray/brown text
+    "editorInlayHint.background": "#28282800", // Transparent background
+    "editorInlayHint.typeForeground": "#A8998490", // Muted gray/brown for type hints
+    "editorInlayHint.parameterForeground": "#8EC07C70", // Muted Aqua/Green for parameters (acceptably warm)
 
-    // This reduces blue wavelength impact while maintaining clear visual hierarchy
-    // Amber color creates less halation on OLED/Mini LED than blue-teal
+    // --- UI Chrome: Activity Bar, Sidebar, Lists ---
+    // Rationale: Using Amber (#D79921) for active/focus states in UI chrome (sidebar, activity bar, lists). Amber is warm and provides clear focus without the intensity of pure orange/yellow.
     "activityBar.background": "#282828",
     "activityBar.foreground": "#EBDBB2",
     "activityBar.inactiveForeground": "#A8998480",
-    "activityBar.activeBorder": "#D79921",
-    "activityBar.activeBackground": "#3C383660",
-    "activityBarBadge.background": "#D79921",
-    "activityBarBadge.foreground": "#282828",
-
+    "activityBar.activeBorder": "#D79921", // Amber active indicator
+    "activityBar.activeBackground": "#3C383660", // Subtle darker background for active item
+    "activityBarBadge.background": "#D79921", // Amber badge background
+    "activityBarBadge.foreground": "#282828", // Dark text on badge
     "sideBar.background": "#282828",
     "sideBar.foreground": "#EBDBB2",
     "sideBarTitle.foreground": "#EBDBB2",
     "sideBarSectionHeader.background": "#3C3836",
     "sideBarSectionHeader.foreground": "#EBDBB2",
-    "sideBarSectionHeader.border": "#D7992150",
-
-    // Enhanced list highlighting with blue accents
-    "list.activeSelectionBackground": "#504945",
+    "sideBarSectionHeader.border": "#D7992150", // Subtle Amber section border
+    "list.activeSelectionBackground": "#504945", // Mid-gray when list is focused
     "list.activeSelectionForeground": "#EBDBB2",
-    "list.inactiveSelectionBackground": "#3C3836",
+    "list.inactiveSelectionBackground": "#3C3836", // Darker gray when list is unfocused
     "list.inactiveSelectionForeground": "#EBDBB2",
-    "list.hoverBackground": "#3C3836",
+    "list.hoverBackground": "#3C3836", // Dark gray on hover
     "list.hoverForeground": "#EBDBB2",
-    "list.focusBackground": "#50494580",
+    "list.focusBackground": "#50494580", // Semi-transparent mid-gray for focused item (non-selected)
     "list.focusForeground": "#EBDBB2",
-    "list.focusOutline": "#D7992160",
-    "list.highlightForeground": "#D79921",
-    "list.errorForeground": "#FB493490",
-    "list.warningForeground": "#FABD2F90",
+    "list.focusOutline": "#D7992160", // Amber outline for focused item
+    "list.highlightForeground": "#D79921", // Amber for highlighted text (e.g., filter matches)
+    "list.errorForeground": "#FB493490", // Consistent with editor diagnostics
+    "list.warningForeground": "#FABD2F90", // Consistent with editor diagnostics
+    "list.filterMatchBackground": "#D7992120", // Subtle Amber background for filter matches
+    "list.filterMatchBorder": "#D7992140", // Subtle Amber border for filter matches
+    "list.invalidItemForeground": "#FB493490", // For invalid items in lists
 
-    // Status bar with more informative states
+    // --- Status Bar ---
+    // Standard background, uses warm accents for states.
     "statusBar.background": "#282828",
     "statusBar.foreground": "#EBDBB2",
-    "statusBar.debuggingBackground": "#FB493490",
+    "statusBar.debuggingBackground": "#FB493490", // Red tint when debugging
     "statusBar.debuggingForeground": "#EBDBB2",
-    "statusBar.noFolderBackground": "#3C3836",
+    "statusBar.noFolderBackground": "#3C3836", // Darker gray when no folder open
     "statusBar.noFolderForeground": "#EBDBB2",
-    "statusBarItem.prominentBackground": "#50494570",
+    "statusBarItem.prominentBackground": "#50494570", // Mid-gray for prominent items
     "statusBarItem.prominentForeground": "#EBDBB2",
     "statusBarItem.prominentHoverBackground": "#50494590",
-    "statusBarItem.remoteBackground": "#B8BB2680",
-    "statusBarItem.remoteForeground": "#282828",
-    "statusBarItem.errorBackground": "#FB493460",
+    "statusBarItem.remoteBackground": "#B8BB2680", // Olive Green tint for remote connection
+    "statusBarItem.remoteForeground": "#282828", // Dark text on remote background
+    "statusBarItem.errorBackground": "#FB493460", // Red tint for errors
     "statusBarItem.errorForeground": "#EBDBB2",
-    "statusBarItem.warningBackground": "#FABD2F60",
-    "statusBarItem.warningForeground": "#282828",
+    "statusBarItem.warningBackground": "#FABD2F60", // Yellow tint for warnings
+    "statusBarItem.warningForeground": "#282828", // Dark text on warning background
+    "statusBarItem.activeBackground": "#FE801940", // Subtle orange background on click
+    "statusBarItem.hoverBackground": "#50494560", // Subtle gray background on hover
 
-    // Title bar with less distracting elements
+    // --- Title Bar (macOS style) ---
     "titleBar.activeBackground": "#282828",
     "titleBar.activeForeground": "#EBDBB2",
     "titleBar.inactiveBackground": "#282828",
-    "titleBar.inactiveForeground": "#A89984",
-    "titleBar.border": "#28282800",
+    "titleBar.inactiveForeground": "#A89984", // Muted gray for inactive window text
+    "titleBar.border": "#28282800", // No border
 
-    // Tab improvements warm orange for better visibility
-    // Prevents blooming effect on Mini LED around bright UI elements
-    "tab.activeBackground": "#3C3836",
+    // --- Tabs ---
+    // Rationale: Using Orange (#FE8019) for active tab border and hover for clear focus.
+    "tab.activeBackground": "#3C3836", // Darker gray for active tab
     "tab.activeForeground": "#EBDBB2",
-    "tab.inactiveBackground": "#282828",
-    "tab.inactiveForeground": "#A89984",
-    "tab.activeBorderTop": "#fe4719",
-    "tab.activeBorder": "#3C3836",
-    "tab.unfocusedActiveBorder": "#50494550",
-    "tab.unfocusedActiveBorderTop": "#50494550",
-    "tab.unfocusedActiveForeground": "#EBDBB290",
-    "tab.unfocusedInactiveForeground": "#A8998480",
-    "tab.hoverBackground": "#3C383680",
+    "tab.inactiveBackground": "#282828", // Base background for inactive tabs
+    "tab.inactiveForeground": "#A89984", // Muted gray for inactive tab text
+    "tab.activeBorderTop": "#FE8019A0", // Orange top border for active tab
+    "tab.activeBorder": "#3C3836", // Matches active background (no side border)
+    "tab.unfocusedActiveBorder": "#50494550", // Subtle gray border when window is unfocused
+    "tab.unfocusedActiveBorderTop": "#FE801950", // Muted Orange top border when unfocused
+    "tab.unfocusedActiveForeground": "#EBDBB290", // Slightly dimmed text when unfocused
+    "tab.unfocusedInactiveForeground": "#A8998480", // Very dim text for inactive tabs in unfocused window
+    "tab.hoverBackground": "#3C383680", // Semi-transparent dark gray on hover
     "tab.hoverForeground": "#EBDBB2",
-    "tab.hoverBorder": "#c5502f60",
+    "tab.hoverBorder": "#FE801960", // Subtle Orange border on hover
+    "tab.lastPinnedBorder": "#D7992180", // Amber border for pinned tabs separator
 
-    // Enhanced problems view with blue accents for better visibility
-    "problemsErrorIcon.foreground": "#fe4719",
-    "problemsWarningIcon.foreground": "#fe8019e8",
-    "problemsInfoIcon.foreground": "#fef319",
+    // Problems View Icons: Warm colors, consistent with diagnostics.
+    "problemsErrorIcon.foreground": "#FB4934", // Standard Red
+    "problemsWarningIcon.foreground": "#FABD2F", // Standard Yellow
+    "problemsInfoIcon.foreground": "#B8BB26", // Standard Olive Green (for Info)
 
-    // Enhanced breadcrumbs for better file navigation
+    // --- Breadcrumbs ---
+    // Subtle navigation aid using orange for active element.
     "breadcrumb.background": "#282828",
-    "breadcrumb.foreground": "#A89984",
-    "breadcrumb.focusForeground": "#EBDBB2",
-    "breadcrumb.activeSelectionForeground": "#FE8019",
-    "breadcrumbPicker.background": "#3C3836",
+    "breadcrumb.foreground": "#A89984", // Muted gray
+    "breadcrumb.focusForeground": "#EBDBB2", // Full brightness when focused
+    "breadcrumb.activeSelectionForeground": "#FE8019", // Orange for the active part
+    "breadcrumbPicker.background": "#3C3836", // Dark gray for picker dropdown
 
-    // Panel improvements for better visibility
+    // --- Panels (Terminal, Output, Problems, Debug Console) ---
     "panel.background": "#282828",
-    "panel.border": "#3C3836",
-    "panelTitle.activeForeground": "#EBDBB2",
-    "panelTitle.inactiveForeground": "#A89984",
-    "panelTitle.activeBorder": "#FE801950",
-    "panelInput.border": "#504945",
-    "panelSection.border": "#50494550",
-    "panelSection.dropBackground": "#FE801920",
+    "panel.border": "#3C3836", // Dark gray border separating from editor
+    "panelTitle.activeForeground": "#EBDBB2", // Full brightness for active panel title
+    "panelTitle.inactiveForeground": "#A89984", // Muted gray for inactive panel titles
+    "panelTitle.activeBorder": "#FE801950", // Subtle orange border below active title
+    "panelInput.border": "#504945", // Mid-gray border for input fields in panels
+    "panelSection.border": "#50494550", // Subtle mid-gray border for sections within panels
+    "panelSection.dropBackground": "#FE801920", // Orange hint for drag-and-drop target
+    "panelSectionHeader.background": "#3C3836",
+    "panelSectionHeader.foreground": "#EBDBB2",
+    "panelSectionHeader.border": "#D7992150", // Consistent with sidebar section header
 
-    // Enhanced Git decorations with better visibility
-    "editorGutter.modifiedBackground": "#FABD2F50",
-    "editorGutter.addedBackground": "#B8BB2660",
-    "editorGutter.deletedBackground": "#FB493460",
-    "gitlens.trailingLineForegroundColor": "#A8998480",
-    "gitlens.gutterUncommittedForegroundColor": "#FABD2F80",
-    "gitlens.gutterForegroundColor": "#A8998490",
-    "gitDecoration.modifiedResourceForeground": "#FABD2FE0",
-    "gitDecoration.addedResourceForeground": "#B8BB26E0",
-    "gitDecoration.deletedResourceForeground": "#FB4934E0",
-    "gitDecoration.untrackedResourceForeground": "#8EC07CE0",
-    "gitDecoration.ignoredResourceForeground": "#A8998460",
-    "gitDecoration.conflictingResourceForeground": "#FE8019E0",
-    "gitDecoration.submoduleResourceForeground": "#D3869BE0",
+    // --- Git Decorations ---
+    // Clear status indication using standard warm palette accents.
+    "editorGutter.modifiedBackground": "#FABD2F50", // Yellow hint in gutter
+    "editorGutter.addedBackground": "#B8BB2660", // Green hint in gutter
+    "editorGutter.deletedBackground": "#FB493460", // Red hint in gutter
+    "gitlens.trailingLineForegroundColor": "#A8998480", // Muted gray for GitLens annotations
+    "gitlens.gutterUncommittedForegroundColor": "#FABD2F80", // Muted yellow for uncommitted changes
+    "gitlens.gutterForegroundColor": "#A8998490", // Muted gray for standard gutter blame
+    "gitDecoration.modifiedResourceForeground": "#FABD2FE0", // Bright Yellow in file explorer
+    "gitDecoration.addedResourceForeground": "#B8BB26E0", // Bright Green in file explorer
+    "gitDecoration.deletedResourceForeground": "#FB4934E0", // Bright Red in file explorer
+    "gitDecoration.untrackedResourceForeground": "#8EC07CE0", // Bright Aqua/Green in file explorer
+    "gitDecoration.ignoredResourceForeground": "#A8998460", // Very muted gray for ignored files
+    "gitDecoration.conflictingResourceForeground": "#FE8019E0", // Bright Orange for conflicts
+    "gitDecoration.submoduleResourceForeground": "#D3869BE0", // Bright Mauve for submodules
 
-    // Diff editor with more vibrant colors for better visibility
-    "diffEditor.insertedTextBackground": "#b8bb2635",
-    "diffEditor.removedTextBackground": "#FB493435",
-    "diffEditor.insertedLineBackground": "#b8bb2625",
-    "diffEditor.removedLineBackground": "#FB493425",
-    "diffEditor.diagonalFill": "#A8998430",
-    "diffEditor.border": "#50494540",
-    "diffEditorOverview.insertedForeground": "#B8BB26AA",
-    "diffEditorOverview.removedForeground": "#FB4934AA",
+    // --- Diff Editor ---
+    // Clear Green/Red distinction fitting the palette. Subtle opacities reduce harshness.
+    "diffEditor.insertedTextBackground": "#b8bb2635", // Low opacity green background
+    "diffEditor.removedTextBackground": "#FB493435", // Low opacity red background
+    "diffEditor.insertedLineBackground": "#b8bb2625", // Very low opacity green line background
+    "diffEditor.removedLineBackground": "#FB493425", // Very low opacity red line background
+    "diffEditor.diagonalFill": "#A8998430", // Muted gray for diagonal stripes indicating whitespace diffs
+    "diffEditor.border": "#50494540", // Subtle mid-gray border
+    "diffEditorOverview.insertedForeground": "#B8BB26AA", // Clear Green in overview ruler
+    "diffEditorOverview.removedForeground": "#FB4934AA", // Clear Red in overview ruler
 
-    // Overview ruler with better visibility
-    "editorOverviewRuler.border": "#504945", // Warm gray
-    "editorOverviewRuler.findMatchForeground": "#FABD2F60", // Changed to yellow
-    "editorOverviewRuler.rangeHighlightForeground": "#FE801960", // Already orange
-    "editorOverviewRuler.selectionHighlightForeground": "#FABD2F40", // Changed to yellow
-    "editorOverviewRuler.wordHighlightForeground": "#D7992140", // Changed to amber
-    "editorOverviewRuler.wordHighlightStrongForeground": "#D7992160", // Changed to amber
-    "editorOverviewRuler.modifiedForeground": "#FABD2F90", // Already yellow
-    "editorOverviewRuler.addedForeground": "#B8BB2690", // Keep olive green
-    "editorOverviewRuler.deletedForeground": "#FB493490", // Keep red
-    "editorOverviewRuler.errorForeground": "#FB493470", // Keep red
-    "editorOverviewRuler.warningForeground": "#FABD2F70", // Keep yellow
-    "editorOverviewRuler.infoForeground": "#B8BB2670", // Changed from blue to olive green
-    "editorOverviewRuler.bracketMatchForeground": "#FABD2F90", // Changed to yellow
+    // --- Overview Ruler (Scrollbar Annotations) ---
+    // Rationale: Uses warm palette (Yellow, Amber, Olive Green) consistently, avoiding blue for info.
+    "editorOverviewRuler.border": "#50494540", // Very subtle border
+    "editorOverviewRuler.findMatchForeground": "#FABD2F60", // Yellow find matches
+    "editorOverviewRuler.rangeHighlightForeground": "#FE801960", // Orange range highlight (e.g., search scope)
+    "editorOverviewRuler.selectionHighlightForeground": "#FABD2F40", // Faint Yellow selection highlight
+    "editorOverviewRuler.wordHighlightForeground": "#D7992140", // Faint Amber word highlights
+    "editorOverviewRuler.wordHighlightStrongForeground": "#D7992160", // Stronger Amber word highlights (writes)
+    "editorOverviewRuler.modifiedForeground": "#FABD2F90", // Yellow git modification markers
+    "editorOverviewRuler.addedForeground": "#B8BB2690", // Olive Green git addition markers
+    "editorOverviewRuler.deletedForeground": "#FB493490", // Red git deletion markers
+    "editorOverviewRuler.errorForeground": "#FB4934A0", // Slightly more visible Red error markers
+    "editorOverviewRuler.warningForeground": "#FABD2FA0", // Slightly more visible Yellow warning markers
+    "editorOverviewRuler.infoForeground": "#B8BB26A0", // Slightly more visible Olive Green info markers
+    "editorOverviewRuler.bracketMatchForeground": "#FABD2F90", // Yellow bracket match markers
 
-    // Focus indicators with yellow highlights for elements viewed briefly
-    "focusBorder": "#FE8019",
-    "contrastBorder": "#50494540",
-    "contrastActiveBorder": "#e5f251",
+    // --- Focus & Contrast Borders ---
+    // Rationale: Using Orange (#FE8019) for primary focus border (inputs, list items). Using Yellow (#FABD2F) for the active contrast border in High Contrast mode.
+    "focusBorder": "#FE8019", // Orange focus border around active elements
+    "contrastBorder": "#50494540", // Very subtle border for elements needing distinction in HC mode
+    "contrastActiveBorder": "#FABD2F", // Yellow active border in HC mode
 
-    // Simplified terminal colors that work reliably
+    // --- Terminal ---
+    // Rationale: Replaced standard ANSI Blue with muted brown/gray (#BDAE93) for maximum blue light reduction. Cyan retained as Aqua/Green (#8EC07C).
     "terminal.background": "#282828",
     "terminal.foreground": "#EBDBB2",
     "terminal.border": "#3C3836",
-    "terminal.selectionBackground": "#504945",
-    "terminalCursor.background": "#282828",
-    "terminalCursor.foreground": "#FE8019",
-
-    // Standard terminal colors that render properly
-    "terminal.ansiBlack": "#504945",
+    "terminal.selectionBackground": "#504945", // Mid-gray selection
+    "terminalCursor.background": "#282828", // Match background for block cursor
+    "terminalCursor.foreground": "#FE8019", // Orange cursor
+    "terminal.ansiBlack": "#504945", // Mid-gray (brighter than background)
     "terminal.ansiRed": "#FB4934",
     "terminal.ansiGreen": "#B8BB26",
     "terminal.ansiYellow": "#FABD2F",
-    "terminal.ansiBlue": "#83A598",
+    "terminal.ansiBlue": "#BDAE93", // Muted Brown/Gray instead of Blue/Aqua
     "terminal.ansiMagenta": "#D3869B",
-    "terminal.ansiCyan": "#9ec07c",
-    "terminal.ansiWhite": "#EBDBB2",
-    "terminal.ansiBrightBlack": "#928374",
+    "terminal.ansiCyan": "#8EC07C", // Keeping Aqua/Green Cyan
+    "terminal.ansiWhite": "#EBDBB2", // Base text color
+    "terminal.ansiBrightBlack": "#928374", // Lighter muted gray
     "terminal.ansiBrightRed": "#FB4934",
     "terminal.ansiBrightGreen": "#B8BB26",
-    "terminal.ansiBrightYellow": "#FABD2FfC",
-    "terminal.ansiBrightBlue": "#83A598",
+    "terminal.ansiBrightYellow": "#FABD2F",
+    "terminal.ansiBrightBlue": "#BDAE93", // Muted Brown/Gray instead of Blue/Aqua
     "terminal.ansiBrightMagenta": "#D3869B",
-    "terminal.ansiBrightCyan": "#bcc268",
+    "terminal.ansiBrightCyan": "#8EC07C", // Keeping Aqua/Green Bright Cyan
     "terminal.ansiBrightWhite": "#EBDBB2",
 
-    // Bracket pair colorization with optimized saturation
-    "editorBracketHighlight.foreground1": "#98971A",
-    "editorBracketHighlight.foreground2": "#D3869BD0",
-    "editorBracketHighlight.foreground3": "#FABD2FD0",
-    "editorBracketHighlight.foreground4": "#FB4934D0",
-    "editorBracketHighlight.foreground5": "#d7d721d0",
-    "editorBracketHighlight.foreground6": "#bb7526d0",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#FB4934",
-    "editorBracketMatch.background": "#FABD2F20",
-    "editorBracketMatch.border": "#FABD2F40",
-
-    // Improved bracket pair guides
-    "editorBracketPairGuide.activeBackground1": "#8EC07C60",
+    // --- Bracket Pair Colorization & Guides ---
+    // Rationale: Uses a distinct warm sequence. Adjusted colors 5 & 6 to use theme Amber and Orange. Added standard opacity. Guides match bracket colors.
+    "editorBracketHighlight.foreground1": "#98971A", // Dark Olive
+    "editorBracketHighlight.foreground2": "#D3869BD0", // Mauve
+    "editorBracketHighlight.foreground3": "#FABD2FD0", // Yellow
+    "editorBracketHighlight.foreground4": "#FB4934D0", // Red
+    "editorBracketHighlight.foreground5": "#d79921D0", // Amber
+    "editorBracketHighlight.foreground6": "#FE8019D0", // Orange
+    "editorBracketHighlight.unexpectedBracket.foreground": "#FB4934", // Bright Red for errors
+    "editorBracketMatch.background": "#FABD2F20", // Subtle yellow background for matching bracket
+    "editorBracketMatch.border": "#FABD2F40", // Subtle yellow border for matching bracket
+    "editorBracketPairGuide.activeBackground1": "#98971A60", // Matched active guide colors to bracket colors
     "editorBracketPairGuide.activeBackground2": "#D3869B60",
     "editorBracketPairGuide.activeBackground3": "#FABD2F60",
     "editorBracketPairGuide.activeBackground4": "#FB493460",
-    "editorBracketPairGuide.activeBackground5": "#83A59860",
-    "editorBracketPairGuide.activeBackground6": "#B8BB2660",
-    "editorBracketPairGuide.background1": "#8EC07C30",
+    "editorBracketPairGuide.activeBackground5": "#d7992160",
+    "editorBracketPairGuide.activeBackground6": "#FE801960",
+    "editorBracketPairGuide.background1": "#98971A30", // Matched inactive guide colors to bracket colors
     "editorBracketPairGuide.background2": "#D3869B30",
     "editorBracketPairGuide.background3": "#FABD2F30",
     "editorBracketPairGuide.background4": "#FB493430",
-    "editorBracketPairGuide.background5": "#83A59830",
-    "editorBracketPairGuide.background6": "#B8BB2630",
+    "editorBracketPairGuide.background5": "#d7992130",
+    "editorBracketPairGuide.background6": "#FE801930",
 
-    // Enhanced input controls
+    // --- Input Controls, Dropdowns, Buttons ---
+    // Consistent dark grays, orange active state borders, olive green info state.
     "input.background": "#3C3836",
     "input.foreground": "#EBDBB2",
-    "input.placeholderForeground": "#A8998490",
-    "inputOption.activeBackground": "#50494580",
-    "inputOption.activeBorder": "#FE801980",
+    "input.placeholderForeground": "#A8998490", // Muted gray for placeholder text
+    "inputOption.activeBackground": "#50494580", // Mid-gray for active filter/option
+    "inputOption.activeBorder": "#FE801980", // Orange border for active option
     "inputOption.activeForeground": "#EBDBB2",
-    "inputOption.hoverBackground": "#50494550",
-    "inputValidation.errorBackground": "#FB493420",
-    "inputValidation.errorBorder": "#FB493490",
+    "inputOption.hoverBackground": "#50494550", // Subtle hover
+    "inputValidation.errorBackground": "#FB493420", // Red tint background for error
+    "inputValidation.errorBorder": "#FB493490", // Red border for error
     "inputValidation.errorForeground": "#EBDBB2",
-    "inputValidation.infoBackground": "#83A59820",
-    "inputValidation.infoBorder": "#83A59890",
+    "inputValidation.infoBackground": "#B8BB2620", // Olive Green tint background for info
+    "inputValidation.infoBorder": "#B8BB2690", // Olive Green border for info
     "inputValidation.infoForeground": "#EBDBB2",
-    "inputValidation.warningBackground": "#FABD2F20",
-    "inputValidation.warningBorder": "#FABD2F90",
+    "inputValidation.warningBackground": "#FABD2F20", // Yellow tint background for warning
+    "inputValidation.warningBorder": "#FABD2F90", // Yellow border for warning
     "inputValidation.warningForeground": "#EBDBB2",
-
-    // Dropdown menus with better focus states
     "dropdown.background": "#3C3836",
     "dropdown.foreground": "#EBDBB2",
     "dropdown.border": "#50494580",
-    "dropdown.listBackground": "#3C3836",
-
-    // Buttons with better hover states
-    "button.background": "#504945",
+    "dropdown.listBackground": "#3C3836", // Ensure dropdown list matches
+    "button.background": "#504945", // Mid-gray primary button
     "button.foreground": "#EBDBB2",
-    "button.hoverBackground": "#665c54",
-    "button.secondaryBackground": "#3C3836",
+    "button.hoverBackground": "#665c54", // Slightly darker warm gray on hover
+    "button.secondaryBackground": "#3C3836", // Darker gray secondary button
     "button.secondaryForeground": "#EBDBB2",
-    "button.secondaryHoverBackground": "#504945",
+    "button.secondaryHoverBackground": "#504945", // Mid-gray secondary hover
 
-    // Optimized scrollbars for better visibility
-    "scrollbarSlider.background": "#50494580",
-    "scrollbarSlider.hoverBackground": "#665c5480",
-    "scrollbarSlider.activeBackground": "#A8998480",
-    "scrollbar.shadow": "#28282830",
+    // --- Scrollbars ---
+    // Subtle, non-distracting warm grays.
+    "scrollbarSlider.background": "#50494580", // Semi-transparent mid-gray slider
+    "scrollbarSlider.hoverBackground": "#665c5480", // Darker gray on hover
+    "scrollbarSlider.activeBackground": "#A8998480", // Muted gray when dragging
+    "scrollbar.shadow": "#28282830", // Subtle shadow where scrollbar meets content
 
-    // Enhanced badges, progress bars with blue for UI elements
+    // --- Badges, Progress Bar ---
+    // Rationale: Using Olive Green for consistency with Info diagnostic color.
     "badge.background": "#B8BB26",
-    "badge.foreground": "#282828",
+    "badge.foreground": "#282828", // Dark text on badge
     "progressBar.background": "#B8BB26",
 
-    // Enhanced minimap for better peripheral vision
-    "minimap.background": "#28282880",
+    // --- Minimap ---
+    // Styled consistently with warm palette, though often disabled per recommendations. Yellow for highlights.
+    "minimap.background": "#28282880", // Semi-transparent background
     "minimap.errorHighlight": "#FB493490",
-    "minimap.findMatchHighlight": "#FABD2F60",
+    "minimap.findMatchHighlight": "#FABD2F60", // Yellow find matches
     "minimap.selectionHighlight": "#50494590",
-    "minimap.warningHighlight": "#FABD2F90",
+    "minimap.warningHighlight": "#FABD2F90", // Yellow warnings
     "minimapGutter.addedBackground": "#B8BB2690",
     "minimapGutter.deletedBackground": "#FB493490",
     "minimapGutter.modifiedBackground": "#FABD2F90",
@@ -384,69 +369,63 @@
     "minimapSlider.hoverBackground": "#50494580",
     "minimapSlider.activeBackground": "#504945A0",
 
-    // Notebook enhancements
+    // --- Notebooks ---
+    // Clear cell separation and status indication using warm accents. Orange focus.
     "notebook.cellBorderColor": "#504945",
     "notebook.cellHoverBackground": "#3C383660",
-    "notebook.cellInsertionIndicator": "#FE801970",
+    "notebook.cellInsertionIndicator": "#FE801970", // Orange line for insertion point
     "notebook.cellStatusBarItemHoverBackground": "#504945",
     "notebook.cellToolbarSeparator": "#504945",
-    "notebook.focusedCellBackground": "#3C383640",
-    "notebook.focusedCellBorder": "#FE801940",
-    "notebook.focusedEditorBorder": "#FE801940",
-    "notebook.inactiveFocusedCellBorder": "#504945",
-    "notebook.selectedCellBackground": "#3C383660",
-    "notebook.symbolHighlightBackground": "#FABD2F20",
-    "notebookScrollbarSlider.activeBackground": "#A8998460",
+    "notebook.focusedCellBackground": "#3C383640", // Subtle dark gray background for focused cell
+    "notebook.focusedCellBorder": "#FE801940", // Subtle orange border for focused cell
+    "notebook.focusedEditorBorder": "#FE801940", // Subtle orange border for focused editor within cell
+    "notebook.inactiveFocusedCellBorder": "#504945", // Mid-gray border when cell focused but window inactive
+    "notebook.selectedCellBackground": "#3C383660", // Subtle dark gray for selected (non-focused) cell
+    "notebook.symbolHighlightBackground": "#FABD2F20", // Yellow hint for symbol highlights in notebook
+    "notebookScrollbarSlider.activeBackground": "#A8998460", // Consistent with editor scrollbar
     "notebookScrollbarSlider.background": "#50494560",
     "notebookScrollbarSlider.hoverBackground": "#665c5460",
-    "notebookStatusErrorIcon.foreground": "#FB493490",
-    "notebookStatusRunningIcon.foreground": "#FABD2F",
-    "notebookStatusSuccessIcon.foreground": "#B8BB26",
-    "notebook.outputContainerBackgroundColor": "#32302f",
+    "notebookStatusErrorIcon.foreground": "#FB493490", // Consistent with diagnostics
+    "notebookStatusRunningIcon.foreground": "#FABD2F", // Yellow for running
+    "notebookStatusSuccessIcon.foreground": "#B8BB26", // Green for success
+    "notebook.outputContainerBackgroundColor": "#32302f", // Slightly different dark gray for output area
     "notebook.outputContainerBorderColor": "#504945",
 
-    // Search highlighting
-    // Yellow creates less fringing on high-contrast displays
-    // Subtle opacity preserved to prevent harsh edges on OLED
-    "editor.findMatchBackground": "#FABD2F30",
-    "editor.findMatchHighlightBackground": "#FABD2F20",
-    "editor.findRangeHighlightBackground": "#50494520",
-    "editor.hoverHighlightBackground": "#50494530",
-    "editor.wordHighlightBackground": "#50494540",
-    "editor.wordHighlightStrongBackground": "#50494550",
-    "editor.findMatchBorder": "#fadf2f70",
-    "editor.findMatchHighlightBorder": "#fae92f60",
+    // --- Find/Search/Highlight ---
+    // Rationale: Using Yellow (#FABD2F) for find/symbol highlights. Provides clear visual cue within the warm palette.
+    "editor.findMatchBackground": "#FABD2F30", // Subtle Yellow background for current find match
+    "editor.findMatchHighlightBackground": "#FABD2F20", // Even subtler Yellow for other find matches
+    "editor.findRangeHighlightBackground": "#50494520", // Subtle gray for find range limit
+    "editor.hoverHighlightBackground": "#50494530", // Subtle gray for hover highlight (e.g., variable definition)
+    "editor.wordHighlightBackground": "#50494540", // Subtle gray for variable read occurrences
+    "editor.wordHighlightStrongBackground": "#50494550", // Slightly stronger gray for variable write occurrences
+    "editor.findMatchBorder": "#FABD2F70", // Yellow border for current find match
+    "editor.findMatchHighlightBorder": "#FABD2F60", // Subtle Yellow border for other find matches
+    "editor.symbolHighlightBackground": "#FABD2F30", // Subtle Yellow background for symbol occurrences
+    "editor.symbolHighlightBorder": "#FABD2F70", // Subtle Yellow border for symbol occurrences
 
-    // Symbol highlighting to compliment the yellow search highlighting
-    "editor.symbolHighlightBackground": "#fae62f30",
-    "editor.symbolHighlightBorder": "#fadf2f70",
-
-    // Peek view - Consistent with search highlighting
-    "peekView.border": "#D7992180",
-    "peekViewEditor.background": "#282828",
-    "peekViewEditor.matchHighlightBackground": "#FABD2F30",
-    "peekViewEditor.matchHighlightBorder": "#FABD2F60",
-    "peekViewEditorGutter.background": "#282828",
-    "peekViewResult.background": "#3C3836",
+    // --- Peek View (Go to Definition/Reference Preview) ---
+    // Rationale: Consistent with find highlights using Yellow (#FABD2F) backgrounds/borders and Amber (#D79921) main border.
+    "peekView.border": "#D7992180", // Amber border for peek view popup
+    "peekViewEditor.background": "#282828", // Standard editor background
+    "peekViewEditor.matchHighlightBackground": "#FABD2F30", // Yellow background for matches inside peek editor
+    "peekViewEditor.matchHighlightBorder": "#FABD2F60", // Yellow border for matches inside peek editor
+    "peekViewEditorGutter.background": "#282828", // Standard gutter background
+    "peekViewResult.background": "#3C3836", // Dark gray for results list
     "peekViewResult.fileForeground": "#EBDBB2",
-    "peekViewResult.lineForeground": "#EBDBB2B0",
-    "peekViewResult.matchHighlightBackground": "#FABD2F40",
-    "peekViewResult.selectionBackground": "#504945",
+    "peekViewResult.lineForeground": "#EBDBB2B0", // Slightly dimmed line numbers
+    "peekViewResult.matchHighlightBackground": "#FABD2F40", // Yellow background for matches in results list
+    "peekViewResult.selectionBackground": "#504945", // Mid-gray selection in results list
     "peekViewResult.selectionForeground": "#EBDBB2",
-    "peekViewTitle.background": "#3C3836",
-    "peekViewTitleDescription.foreground": "#A89984",
-    "peekViewTitleLabel.foreground": "#EBDBB2",
+    "peekViewTitle.background": "#3C3836", // Dark gray title area
+    "peekViewTitleDescription.foreground": "#A89984", // Muted gray description (e.g., file path)
+    "peekViewTitleLabel.foreground": "#EBDBB2", // Standard text for title label (e.g., "Results")
 
-    // OLED optimizations with slightly warmer background
-    "editorGutter.background": "#28282800",
-    "editor.background": "#282828F8",
-
-    // Non-color blind version specific settings
-
-    // Subtle indent guides
+    // --- Indent Guides ---
+    // Rationale: Detailed 6-level orange active guides and gray inactive guides provide depth perception without high contrast lines. Orange is warm and less impactful on night vision than blue/green.
     "editorIndentGuide.activeBackground1": "#FE8019E0",
-    "editorIndentGuide.activeBackground2": "#FE8019c0",
-    "editorIndentGuide.activeBackground3": "#FE8019a0",
+    "editorIndentGuide.activeBackground2": "#FE8019C0",
+    "editorIndentGuide.activeBackground3": "#FE8019A0",
     "editorIndentGuide.activeBackground4": "#FE801980",
     "editorIndentGuide.activeBackground5": "#FE801960",
     "editorIndentGuide.activeBackground6": "#FE801940",
@@ -458,655 +437,147 @@
     "editorIndentGuide.background6": "#50494520"
   },
 
-  // Token colors with expanded language support
+  // --- Token Colors (Syntax Highlighting) ---
+  // Uses TextMate scopes for broad language compatibility, enhanced by semantic tokens above.
   "tokenColors": [
-    // Comments with slightly increased contrast while maintaining comfort
-    {
-      "scope": ["comment", "punctuation.definition.comment"],
-      "settings": {
-        "foreground": "#BDAE93",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": ["keyword", "storage.type", "storage.modifier"],
-      "settings": {
-        "foreground": "#FB4934"
-      }
-    },
-    {
-      "scope": [
-        "keyword.operator",
-        "punctuation.definition",
-        "punctuation.separator",
-        "punctuation.terminator"
-      ],
-      "settings": {
-        "foreground": "#FE8019"
-      }
-    },
-    // Optimized punctuation with reduced visual noise
-    {
-      "scope": [
-        "punctuation.section",
-        "punctuation.bracket",
-        "punctuation.accessor"
-      ],
-      "settings": {
-        "foreground": "#FE801990"
-      }
-    },
-    {
-      "scope": [
-        "string",
-        "string.quoted",
-        "string.template",
-        "punctuation.definition.string"
-      ],
-      "settings": {
-        "foreground": "#8EC07C"
-      }
-    },
-    {
-      "scope": [
-        "constant.numeric",
-        "constant.language",
-        "constant.character",
-        "constant.other"
-      ],
-      "settings": {
-        "foreground": "#D3869B"
-      }
-    },
-    {
-      "scope": [
-        "entity.name.type",
-        "entity.other.inherited-class",
-        "support.type"
-      ],
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
-    {
-      "scope": [
-        "entity.name.function",
-        "support.function",
-        "meta.function-call"
-      ],
-      "settings": {
-        "foreground": "#B8BB26"
-      }
-    },
-    {
-      "scope": ["variable", "support.variable", "variable.other"],
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    },
-    // Enhanced highlighting for self/this references
-    {
-      "scope": [
-        "variable.language.this",
-        "variable.language.self",
-        "variable.language.super"
-      ],
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": ["meta.tag", "entity.name.tag", "punctuation.definition.tag"],
-      "settings": {
-        "foreground": "#FB4934"
-      }
-    },
-    {
-      "scope": ["entity.other.attribute-name"],
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
+    // Comments: Muted warm brown/gray, italicized for deemphasis.
+    { "scope": ["comment", "punctuation.definition.comment"], "settings": { "foreground": "#BDAE93", "fontStyle": "italic" }},
+    // Keywords & Storage: Core language constructs in soft Red.
+    { "scope": ["keyword", "storage.type", "storage.modifier"], "settings": { "foreground": "#FB4934" }},
+    // Operators & Core Punctuation: Orange for symbols.
+    { "scope": ["keyword.operator", "punctuation.separator", "punctuation.terminator"], "settings": { "foreground": "#FE8019" }},
+    // Brackets, Braces, Parentheses, String Quotes: Slightly desaturated Orange for less visual noise.
+    { "scope": ["punctuation.definition", "punctuation.section", "meta.brace", "punctuation.definition.parameters.begin", "punctuation.definition.parameters.end", "punctuation.definition.brackets", "meta.brackets", "punctuation.accessor", "punctuation.definition.string.begin", "punctuation.definition.string.end", "punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end"], "settings": { "foreground": "#FE8019A0" }},
+    // Strings: Soft Aqua/Green, warm enough to be comfortable.
+    { "scope": ["string", "string.quoted", "string.template"], "settings": { "foreground": "#8EC07C" }},
+    // Constants, Numbers, Booleans: Dusty Purple/Mauve.
+    { "scope": ["constant.numeric", "constant.language", "constant.character", "constant.other"], "settings": { "foreground": "#D3869B" }},
+    // Types, Classes, Structs, Built-in Support Types: Golden Yellow.
+    { "scope": ["entity.name.type", "entity.other.inherited-class", "support.type"], "settings": { "foreground": "#FABD2F" }},
+    // Functions & Methods, Built-in Support Functions: Olive Green.
+    { "scope": ["entity.name.function", "support.function", "meta.function-call"], "settings": { "foreground": "#B8BB26" }},
+    // Variables: Default text color (Warm Beige) for standard variables.
+    { "scope": ["variable", "support.variable", "variable.other", "meta.definition.variable"], "settings": { "foreground": "#EBDBB2" }},
+    // `this`, `self`, `super`: Red italic for emphasis on context object.
+    { "scope": ["variable.language.this", "variable.language.self", "variable.language.super"], "settings": { "foreground": "#FB4934", "fontStyle": "italic" }},
+    // HTML/XML Tags: Red for tag names.
+    { "scope": ["entity.name.tag", "punctuation.definition.tag"], "settings": { "foreground": "#FB4934" }},
+    // HTML/XML Attributes: Yellow for attribute names.
+    { "scope": ["entity.other.attribute-name"], "settings": { "foreground": "#FABD2F" }},
 
-    // Additional language-specific enhancements
+    // --- Language-Specific Enhancements ---
 
-    // Rust-specific highlighting
-    {
-      "scope": "entity.name.lifetime.rust",
-      "settings": {
-        "foreground": "#FE8019",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "storage.modifier.lifetime.rust",
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "entity.name.type.trait.rust",
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "meta.attribute.rust",
-      "settings": {
-        "foreground": "#D3869B"
-      }
-    },
-    {
-      "scope": "meta.macro.rust",
-      "settings": {
-        "foreground": "#FB4934"
-      }
-    },
+    // Rust
+    { "scope": "entity.name.lifetime.rust", "settings": { "foreground": "#FE8019", "fontStyle": "italic" }}, // Orange italic lifetimes 'a
+    { "scope": "storage.modifier.lifetime.rust", "settings": { "foreground": "#FB4934", "fontStyle": "italic" }}, // Red italic lifetime keyword '
+    { "scope": "entity.name.type.trait.rust", "settings": { "foreground": "#FABD2F", "fontStyle": "italic" }}, // Italic Yellow traits
+    { "scope": "meta.attribute.rust", "settings": { "foreground": "#D3869B" }}, // Mauve attributes #[...]
+    { "scope": "meta.macro.rust", "settings": { "foreground": "#FB4934" }}, // Red macros!
 
-    // C/C++ enhancements
-    {
-      "scope": "storage.modifier.pointer.cpp",
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "storage.modifier.reference.cpp",
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "entity.name.scope-resolution.cpp",
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
-    {
-      "scope": "entity.name.namespace.cpp",
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "italic"
-      }
-    },
+    // C/C++
+    { "scope": "storage.modifier.pointer.cpp", "settings": { "foreground": "#FB4934", "fontStyle": "bold" }}, // Bold red pointers *
+    { "scope": "storage.modifier.reference.cpp", "settings": { "foreground": "#FB4934", "fontStyle": "bold" }}, // Bold red references &
+    { "scope": "entity.name.scope-resolution.cpp", "settings": { "foreground": "#FABD2F" }}, // Yellow scope resolution ::
+    { "scope": "entity.name.namespace.cpp", "settings": { "foreground": "#FABD2F", "fontStyle": "italic" }}, // Italic Yellow namespaces
 
-    // Go language enhancements
-    {
-      "scope": "keyword.type.go",
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
-    {
-      "scope": "entity.name.package.go",
-      "settings": {
-        "foreground": "#8EC07C"
-      }
-    },
-    {
-      "scope": "entity.name.import.go",
-      "settings": {
-        "foreground": "#8EC07C"
-      }
-    },
-    {
-      "scope": "variable.other.assignment.go",
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    },
+    // Go
+    { "scope": "keyword.type.go", "settings": { "foreground": "#FABD2F" }}, // Go `type` keyword Yellow
+    { "scope": "entity.name.package.go", "settings": { "foreground": "#8EC07C" }}, // Aqua/Green packages
+    { "scope": "entity.name.import.go", "settings": { "foreground": "#8EC07C" }}, // Aqua/Green imports
 
-    // SQL enhancement
-    {
-      "scope": [
-        "keyword.other.DDL.create.II.sql",
-        "keyword.other.DDL.table.sql",
-        "keyword.other.DML.sql"
-      ],
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "entity.name.function.sql",
-      "settings": {
-        "foreground": "#B8BB26"
-      }
-    },
-    {
-      "scope": "constant.numeric.sql",
-      "settings": {
-        "foreground": "#D3869B"
-      }
-    },
-    {
-      "scope": "storage.type.sql",
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
-    {
-      "scope": ["keyword.other.order.sql", "keyword.other.join.sql"],
-      "settings": {
-        "foreground": "#FE8019",
-        "fontStyle": "bold"
-      }
-    },
+    // SQL
+    { "scope": ["keyword.other.DDL", "keyword.other.DML", "keyword.other.sql"], "settings": { "foreground": "#FB4934", "fontStyle": "bold" }}, // Core SQL verbs bold red
+    { "scope": "entity.name.function.sql", "settings": { "foreground": "#B8BB26" }}, // SQL functions Olive Green
+    { "scope": "constant.numeric.sql", "settings": { "foreground": "#D3869B" }}, // SQL numbers Mauve
+    { "scope": "storage.type.sql", "settings": { "foreground": "#FABD2F" }}, // SQL data types Yellow
+    { "scope": ["keyword.other.order.sql", "keyword.other.join.sql", "keyword.other.group.sql"], "settings": { "foreground": "#FE8019", "fontStyle": "bold" }}, // Clauses bold orange
 
-    // Enhanced Python highlighting
-    {
-      "scope": [
-        "keyword.control.import.python",
-        "keyword.control.export.python"
-      ],
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "support.function.builtin.python",
-      "settings": {
-        "foreground": "#B8BB26",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "support.type.python",
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "meta.function-call.python",
-      "settings": {
-        "foreground": "#B8BB26"
-      }
-    },
-    {
-      "scope": "meta.function.python",
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    },
-    {
-      "scope": "entity.name.function.decorator.python",
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "support.variable.magic.python",
-      "settings": {
-        "foreground": "#D3869B",
-        "fontStyle": "italic"
-      }
-    },
-    // Add special treatment for Python inline f-strings
-    {
-      "scope": "string.interpolated.python",
-      "settings": {
-        "foreground": "#8EC07CE0"
-      }
-    },
-    {
-      "scope": "constant.character.format.placeholder.python",
-      "settings": {
-        "foreground": "#FE8019E0",
-        "fontStyle": "italic"
-      }
-    },
-    // Python docstring enhancement
-    {
-      "scope": "string.quoted.docstring.multi.python",
-      "settings": {
-        "foreground": "#BDAE93",
-        "fontStyle": "italic"
-      }
-    },
-    // Python type hints
-    // Python type hints enhancement
-    {
-      "scope": "meta.type.annotation.python",
-      "settings": {
-        "foreground": "#FABD2FE0"
-      }
-    },
-    // Enhanced function parameters with better visibility
-    {
-      "scope": "meta.function.parameters.python",
-      "settings": {
-        "foreground": "#EBDBB2E0",
-        "fontStyle": "italic"
-      }
-    },
+    // Python
+    { "scope": ["keyword.control.import.python", "keyword.control.flow.python"], "settings": { "foreground": "#FB4934" }}, // Imports/flow control standard keyword red
+    { "scope": "support.function.builtin.python", "settings": { "foreground": "#B8BB26", "fontStyle": "italic" }}, // Italic Olive Green for builtins (print, len)
+    { "scope": "support.type.python", "settings": { "foreground": "#FABD2F", "fontStyle": "italic" }}, // Italic Yellow for builtin types (str, int)
+    { "scope": "meta.function-call.generic.python", "settings": { "foreground": "#B8BB26" }}, // Function calls Olive Green
+    { "scope": "meta.function.parameters.python variable.parameter", "settings": { "foreground": "#EBDBB2", "fontStyle": "italic" }}, // Italic default text for parameters
+    { "scope": "entity.name.function.decorator.python", "settings": { "foreground": "#FB4934", "fontStyle": "italic" }}, // Italic Red for decorators @
+    { "scope": "support.variable.magic.python", "settings": { "foreground": "#D3869B", "fontStyle": "italic" }}, // Italic Mauve for __dunder__ methods/variables
+    { "scope": "string.interpolated.python .string", "settings": { "foreground": "#8EC07C" }}, // f-string content standard string color
+    { "scope": "string.interpolated.python .meta.interpolation", "settings": { "foreground": "#EBDBB2" }}, // Code inside {} default text color
+    { "scope": "constant.character.format.placeholder.python", "settings": { "foreground": "#FE8019E0", "fontStyle": "italic" }}, // %s, %d placeholders orange italic
+    { "scope": "string.quoted.docstring.multi.python", "settings": { "foreground": "#BDAE93", "fontStyle": "italic" }}, // Docstrings same as comments
+    { "scope": "meta.type.annotation.python .entity.name.type", "settings": { "foreground": "#FABD2FE0" }}, // Type hints bright yellow
+    { "scope": "meta.type.annotation.python .support.type", "settings": { "foreground": "#FABD2FE0", "fontStyle": "italic" }}, // Built-in type hints bright italic yellow
 
-    // JavaScript/React/Next.js enhancements
-    {
-      "scope": ["support.class.component.jsx", "support.class.component.tsx"],
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": ["meta.tag.jsx", "meta.tag.tsx"],
-      "settings": {
-        "foreground": "#FB4934"
-      }
-    },
-    {
-      "scope": [
-        "entity.other.attribute-name.jsx",
-        "entity.other.attribute-name.tsx"
-      ],
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
-    {
-      "scope": [
-        "variable.other.readwrite.js",
-        "variable.other.object.js",
-        "variable.other.readwrite.tsx",
-        "variable.other.object.tsx"
-      ],
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    },
-    {
-      "scope": [
-        "support.type.primitive.ts",
-        "support.type.primitive.tsx",
-        "support.type.builtin.ts",
-        "support.type.builtin.tsx"
-      ],
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": [
-        "meta.object-literal.key.js",
-        "meta.object-literal.key.ts",
-        "meta.object-literal.key.tsx"
-      ],
-      "settings": {
-        "foreground": "#D3869B"
-      }
-    },
-    {
-      "scope": [
-        "variable.other.constant.js",
-        "variable.other.constant.ts",
-        "variable.other.constant.tsx"
-      ],
-      "settings": {
-        "foreground": "#D3869B",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": [
-        "string.quoted.template.js",
-        "string.quoted.template.ts",
-        "string.quoted.template.tsx"
-      ],
-      "settings": {
-        "foreground": "#8EC07C"
-      }
-    },
-    {
-      "scope": [
-        "punctuation.definition.template-expression.begin.js",
-        "punctuation.definition.template-expression.begin.ts",
-        "punctuation.definition.template-expression.begin.tsx",
-        "punctuation.definition.template-expression.end.js",
-        "punctuation.definition.template-expression.end.ts",
-        "punctuation.definition.template-expression.end.tsx"
-      ],
-      "settings": {
-        "foreground": "#FE8019"
-      }
-    },
-    {
-      "scope": [
-        "meta.template.expression.js",
-        "meta.template.expression.ts",
-        "meta.template.expression.tsx"
-      ],
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    },
+    // JavaScript / TypeScript / JSX / TSX
+    { "scope": ["support.class.component.jsx", "support.class.component.tsx"], "settings": { "foreground": "#FABD2F", "fontStyle": "bold" }}, // React class components bold yellow
+    { "scope": ["entity.name.function.jsx", "entity.name.function.tsx"], "settings": { "foreground": "#FABD2F" }}, // React functional components Yellow (often treated as types)
+    { "scope": ["meta.tag.jsx .entity.name.tag", "meta.tag.tsx .entity.name.tag"], "settings": { "foreground": "#FB4934" }}, // JSX tags red
+    { "scope": ["meta.tag.jsx .entity.other.attribute-name", "meta.tag.tsx .entity.other.attribute-name"], "settings": { "foreground": "#FABD2F" }}, // JSX attributes yellow
+    { "scope": ["support.type.primitive.ts", "support.type.primitive.tsx", "support.type.builtin.ts", "support.type.builtin.tsx"], "settings": { "foreground": "#FABD2F", "fontStyle": "italic" }}, // TS primitives italic yellow
+    { "scope": ["meta.object-literal.key.js", "meta.object-literal.key.ts", "meta.object-literal.key.tsx"], "settings": { "foreground": "#D3869B" }}, // Object keys mauve (like properties)
+    { "scope": ["variable.other.constant.js", "variable.other.constant.ts", "variable.other.constant.tsx"], "settings": { "foreground": "#D3869B" }}, // Constants mauve (semantic `variable.readonly` might make italic)
+    { "scope": ["string.template.js", "string.template.ts", "string.template.tsx"], "settings": { "foreground": "#8EC07C" }}, // Template literal content green/aqua
+    { "scope": ["meta.template.expression.js", "meta.template.expression.ts", "meta.template.expression.tsx"], "settings": { "foreground": "#EBDBB2" }}, // Code inside ${} default text
+    { "scope": ["support.function.hooks.js", "support.function.hooks.ts", "support.function.hooks.jsx", "support.function.hooks.tsx"], "settings": { "foreground": "#B8BB26", "fontStyle": "italic" }}, // React hooks italic Olive Green
 
-    // React Hooks specific enhancement
-    {
-      "scope": [
-        "support.function.hooks.js",
-        "support.function.hooks.ts",
-        "support.function.hooks.jsx",
-        "support.function.hooks.tsx"
-      ],
-      "settings": {
-        "foreground": "#B8BB26",
-        "fontStyle": "italic"
-      }
-    },
+    // Swift
+    { "scope": "keyword.declaration.swift", "settings": { "foreground": "#FB4934", "fontStyle": "bold" }}, // `func`, `class`, etc. bold red
+    { "scope": "entity.name.function.swift", "settings": { "foreground": "#B8BB26" }}, // Function names Olive Green
+    { "scope": "keyword.operator.swift", "settings": { "foreground": "#FE8019" }}, // Operators Orange
+    { "scope": "storage.type.swift", "settings": { "foreground": "#FABD2F" }}, // Type keywords Yellow
 
-    // Swift/Mobile enhancements
-    {
-      "scope": "keyword.declaration.swift",
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "entity.name.function.swift",
-      "settings": {
-        "foreground": "#B8BB26"
-      }
-    },
-    {
-      "scope": "keyword.operator.swift",
-      "settings": {
-        "foreground": "#FE8019"
-      }
-    },
-    {
-      "scope": "storage.type.swift",
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
+    // Kotlin
+    { "scope": "keyword.other.kotlin", "settings": { "foreground": "#FB4934" }}, // Keywords Red
+    { "scope": "entity.name.package.kotlin", "settings": { "foreground": "#8EC07C", "fontStyle": "italic" }}, // Italic Aqua/Green packages
+    { "scope": "variable.parameter.function.kotlin", "settings": { "foreground": "#EBDBB2", "fontStyle": "italic" }}, // Italic default text parameters
 
-    // Kotlin enhancements
-    {
-      "scope": "keyword.other.kotlin",
-      "settings": {
-        "foreground": "#FB4934"
-      }
-    },
-    {
-      "scope": "entity.name.package.kotlin",
-      "settings": {
-        "foreground": "#8EC07C",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "variable.parameter.function.kotlin",
-      "settings": {
-        "foreground": "#EBDBB2",
-        "fontStyle": "italic"
-      }
-    },
+    // GraphQL
+    { "scope": "keyword.operation.graphql", "settings": { "foreground": "#FB4934", "fontStyle": "bold" }}, // `query`, `mutation` bold red
+    { "scope": "entity.name.fragment.graphql", "settings": { "foreground": "#FABD2F", "fontStyle": "italic" }}, // Fragment names italic yellow
+    { "scope": "variable.graphql", "settings": { "foreground": "#EBDBB2", "fontStyle": "italic" }}, // $variable italic default text
 
-    // GraphQL enhancements
-    {
-      "scope": "keyword.operation.graphql",
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "entity.name.fragment.graphql",
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": "variable.graphql",
-      "settings": {
-        "foreground": "#EBDBB2",
-        "fontStyle": "italic"
-      }
-    },
-
-    // Python Notebook specific (for .ipynb files)
-    {
-      "scope": "markup.heading.markdown.jupyter",
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "markup.raw.code-fence.jupyter",
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    },
-    {
-      "scope": "markup.raw.delimiter.jupyter",
-      "settings": {
-        "foreground": "#928374"
-      }
-    },
-    {
-      "scope": "text.html.markdown.jupyter",
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    },
-    {
-      "scope": "markup.output.jupyter",
-      "settings": {
-        "foreground": "#BDAE93"
-      }
-    },
-    {
-      "scope": "meta.output.jupyter",
-      "settings": {
-        "foreground": "#BDAE93"
-      }
-    },
-    {
-      "scope": ["markup.output.stderr.jupyter", "markup.output.error.jupyter"],
-      "settings": {
-        "foreground": "#FB493490"
-      }
-    },
-    {
-      "scope": "punctuation.output.jupyter",
-      "settings": {
-        "foreground": "#665c54"
-      }
-    },
+    // Python Notebook specific (for .ipynb files within VS Code)
+    { "scope": "markup.heading.markdown.jupyter", "settings": { "foreground": "#FABD2F", "fontStyle": "bold" }}, // Markdown Headings in notebooks Yellow Bold
+    { "scope": "markup.raw.code-fence.jupyter", "settings": { "foreground": "#EBDBB2" }}, // Code blocks default text
+    { "scope": "markup.raw.delimiter.jupyter", "settings": { "foreground": "#928374" }}, // Code block ``` muted gray
+    { "scope": "text.html.markdown.jupyter", "settings": { "foreground": "#EBDBB2" }}, // Markdown text default
+    { "scope": "markup.output.jupyter", "settings": { "foreground": "#BDAE93" }}, // Standard output muted brown/gray
+    { "scope": "meta.output.jupyter", "settings": { "foreground": "#BDAE93" }},
+    { "scope": ["markup.output.stderr.jupyter", "markup.output.error.jupyter"], "settings": { "foreground": "#FB493490" }}, // Error output muted red
+    { "scope": "punctuation.output.jupyter", "settings": { "foreground": "#665c54" }}, // Output punctuation darker gray
 
     // Enhanced Markdown for documentation
-    {
-      "scope": ["markup.heading.markdown", "entity.name.section"],
-      "settings": {
-        "foreground": "#FB4934",
-        "fontStyle": "bold underline"
-      }
-    },
-    {
-      "scope": ["markup.bold"],
-      "settings": {
-        "foreground": "#FABD2F",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": ["markup.italic"],
-      "settings": {
-        "foreground": "#D3869B",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": ["markup.quote"],
-      "settings": {
-        "foreground": "#B8BB26",
-        "fontStyle": "italic"
-      }
-    },
-    {
-      "scope": ["markup.inline.raw", "markup.fenced_code", "markup.raw.block"],
-      "settings": {
-        "foreground": "#8EC07C"
-      }
-    },
-    {
-      "scope": ["markup.list"],
-      "settings": {
-        "foreground": "#FE8019"
-      }
-    },
-    {
-      "scope": ["markup.link"],
-      "settings": {
-        "foreground": "#83A598"
-      }
-    },
+    // Rationale: Clear hierarchy using warm colors, avoiding blue for links.
+    { "scope": ["markup.heading.markdown", "entity.name.section.markdown"], "settings": { "foreground": "#FB4934", "fontStyle": "bold" }}, // Headings bold red
+    { "scope": ["markup.bold.markdown"], "settings": { "foreground": "#FABD2F", "fontStyle": "bold" }}, // Bold yellow
+    { "scope": ["markup.italic.markdown"], "settings": { "foreground": "#D3869B", "fontStyle": "italic" }}, // Italic mauve
+    { "scope": ["markup.quote.markdown"], "settings": { "foreground": "#B8BB26", "fontStyle": "italic" }}, // Quotes italic Olive Green
+    { "scope": ["markup.inline.raw.string.markdown", "markup.fenced_code.block.markdown"], "settings": { "foreground": "#8EC07C" }}, // Code blocks/inline code Aqua/Green
+    { "scope": ["markup.list.unnumbered.markdown", "markup.list.numbered.markdown"], "settings": { "foreground": "#EBDBB2" }}, // List items default text
+    { "scope": ["punctuation.definition.list.begin.markdown"], "settings": { "foreground": "#FE8019" }}, // List markers (*, -, 1.) orange
+    { "scope": ["markup.underline.link.markdown", "string.other.link.title.markdown", "string.other.link.description.markdown"], "settings": { "foreground": "#8EC07C" }}, // Links Aqua/Green
+    { "scope": ["punctuation.definition.link", "punctuation.definition.metadata.markdown"], "settings": { "foreground": "#8EC07C80" }}, // Link brackets/parentheses muted Aqua/Green
 
-    // JSON specific enhancements
-    {
-      "scope": "support.type.property-name.json",
-      "settings": {
-        "foreground": "#D3869B"
-      }
-    },
-    {
-      "scope": "constant.language.json",
-      "settings": {
-        "foreground": "#FABD2F"
-      }
-    },
+    // JSON
+    { "scope": "support.type.property-name.json", "settings": { "foreground": "#D3869B" }}, // Keys mauve
+    { "scope": "constant.language.json", "settings": { "foreground": "#FABD2F" }}, // true, false, null yellow
+    { "scope": "string.quoted.double.json", "settings": { "foreground": "#8EC07C" }}, // String values Aqua/Green
+    { "scope": "constant.numeric.json", "settings": { "foreground": "#D3869B" }}, // Numbers mauve
 
-    // YAML enhancements
-    {
-      "scope": "entity.name.tag.yaml",
-      "settings": {
-        "foreground": "#D3869B"
-      }
-    },
-    {
-      "scope": "punctuation.separator.key-value.yaml",
-      "settings": {
-        "foreground": "#FE8019"
-      }
-    },
-    {
-      "scope": "string.unquoted.yaml",
-      "settings": {
-        "foreground": "#EBDBB2"
-      }
-    }
+    // YAML
+    { "scope": "entity.name.tag.yaml", "settings": { "foreground": "#D3869B" }}, // Keys mauve
+    { "scope": "punctuation.separator.key-value.yaml", "settings": { "foreground": "#FE8019A0" }}, // Colon separator muted orange
+    { "scope": "string.unquoted.plain.out.yaml", "settings": { "foreground": "#EBDBB2" }}, // Plain string values default text
+    { "scope": "string.quoted.single.yaml", "settings": { "foreground": "#8EC07C" }}, // Quoted strings Aqua/Green
+    { "scope": "string.quoted.double.yaml", "settings": { "foreground": "#8EC07C" }},
+    { "scope": "constant.numeric.yaml", "settings": { "foreground": "#D3869B" }}, // Numbers mauve
+    { "scope": "constant.language.yaml", "settings": { "foreground": "#FABD2F" }}, // true, false, null yellow
+
+    // Generic Fallbacks/Emphasis
+    { "scope": "markup.inserted", "settings": { "foreground": "#B8BB26" }}, // Green for added text (e.g., Git diff in commit message)
+    { "scope": "markup.deleted", "settings": { "foreground": "#FB4934" }}, // Red for deleted text
+    { "scope": "markup.changed", "settings": { "foreground": "#FABD2F" }}, // Yellow for changed text
+    { "scope": "invalid", "settings": { "foreground": "#FB4934", "background": "#FB493420" }}, // Red foreground, subtle red background for invalid code
+    { "scope": "invalid.deprecated", "settings": { "foreground": "#A89984", "fontStyle": "strikethrough" }} // Muted gray strikethrough for deprecated code
   ]
 }
+// END OF FILE astigmatism-easy-warm-final.json
