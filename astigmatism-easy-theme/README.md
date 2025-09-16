@@ -2,7 +2,7 @@
 
 A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline. Specifically designed for coding in low-light environments while wearing prismatic neuro lens glasses.
 
-![AstigmatismEasy Theme Preview](https://github.com/yourusername/astigmatism-easy/raw/main/images/theme-preview.png)
+> _Screenshot omitted here so the repository stays free of binary assets._
 
 ## 🔬 The Science Behind This Theme
 
