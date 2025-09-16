@@ -2,11 +2,7 @@
 
 A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline. Available in both **Night** and **Daylight** versions to support your entire coding workflow. The Night version is specifically designed for coding in low-light environments, especially beneficial for those wearing prismatic neuro lens glasses, while the Daylight version provides enhanced visibility and comfort in brighter conditions.
 
-![AstigmatismEasy Night Theme Preview](https://github.com/yourusername/astigmatism-easy/raw/main/images/night-theme-preview.png)
-*Replace with actual Night theme preview image and correct path*
-
-![AstigmatismEasy Daylight Theme Preview](https://github.com/yourusername/astigmatism-easy/raw/main/images/daylight-theme-preview.png)
-*Replace with actual Daylight theme preview image and correct path*
+> _Screenshot omitted to keep the repository free of binary assets required by some contribution workflows._
 
 ## 🌓 Daylight and Night Versions
 
