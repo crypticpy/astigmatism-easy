@@ -1,8 +1,14 @@
 # AstigmatismEasy Theme
 
-A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline. Specifically designed for coding in low-light environments while wearing prismatic neuro lens glasses.
+A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline. Specifically designed for coding in low-light environments while wearing prismatic neuro lens glasses. Now available in Night, Daylight, and Infrared variants so you can stay comfortable across any lighting condition.
 
 > _Screenshot omitted here so the repository stays free of binary assets._
+
+## 🌒 Theme Variants
+
+- **Night**: The original warm-dark experience tuned for minimizing halation while preserving contrast in very dim rooms.
+- **Daylight**: Keeps the core editor colors but lightens supporting UI surfaces and increases opacity so the theme stays legible in brighter spaces.
+- **Infrared**: A brand new, red-shifted palette with oxblood backgrounds, rose text, and ember diagnostics for astronomer-level dark adaptation.
 
 ## 🔬 The Science Behind This Theme
 
@@ -29,7 +35,7 @@ Astigmatism causes light to focus unevenly, leading to blurred or ghosted vision
 
 ### Scientific Color Selection
 
-Every color in this theme has been chosen based on vision science principles:
+Every color in the Night and Daylight variants has been chosen based on vision science principles:
 
 | Element | Color | Contrast | Scientific Rationale |
 |---------|-------|----------|---------------------|
@@ -39,6 +45,19 @@ Every color in this theme has been chosen based on vision science principles:
 | Strings | #8EC07C | 7.0:1 | Green-teal is easier to focus than blue while remaining distinguishable |
 | Numbers | #D3869B | 6.0:1 | Desaturated purple provides contrast without excessive brightness |
 | Comments | #A89984 | 5.3:1 | Intentionally lower contrast for deemphasis while remaining legible |
+
+**Infrared Variant Palette**
+
+The Infrared theme keeps the same ergonomic goals while shifting every interface element toward red hues:
+
+| Element | Color | Contrast | Scientific Rationale |
+|---------|-------|----------|---------------------|
+| Background | #140707 | - | Deep oxblood keeps luminance extremely low without using pure black |
+| Text | #F2D6C9 | 14.3:1 | Rose-beige text maintains clarity while removing blue wavelengths |
+| Keywords | #FF6B6B | 7.1:1 | Crimson keywords provide emphasis without harsh saturation |
+| Strings | #FF9E80 | 9.8:1 | Salmon tones stay legible and soothing during long sessions |
+| Numbers | #F28CA5 | 8.5:1 | Dusty rose numerics separate data without blooming |
+| Comments | #C69A92 | 7.9:1 | Muted clay comments remain readable yet understated |
 
 ## ✨ Optimized for Mini LED & OLED at High Refresh Rates
 
@@ -78,7 +97,7 @@ This theme includes specific optimizations for developers using high-end display
 
 ## 🎨 Color Palette
 
-The theme uses a carefully calibrated warm color palette:
+The Night and Daylight variants use a carefully calibrated warm color palette:
 
 - **Background**: #282828 (very dark warm gray)
 - **Text**: #EBDBB2 (warm beige)
@@ -89,6 +108,18 @@ The theme uses a carefully calibrated warm color palette:
 - **Numbers**: #D3869B (dusty purple/mauve)
 - **Types/Classes**: #FABD2F (golden yellow)
 - **Functions**: #B8BB26 (olive green)
+
+**Infrared variant highlights:**
+
+- **Background**: #140707 (deep oxblood)
+- **Text**: #F2D6C9 (rose beige)
+- **Comments**: #C69A92 (muted clay)
+- **Keywords**: #FF6B6B (crimson)
+- **Operators**: #FF7F6E (ember)
+- **Strings**: #FF9E80 (salmon-peach)
+- **Numbers**: #F28CA5 (dusty rose)
+- **Types/Classes**: #FF9780 (coral)
+- **Functions**: #FFB4A2 (peach)
 
 ## 📋 Installation
 

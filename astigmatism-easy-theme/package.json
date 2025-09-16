@@ -1,8 +1,8 @@
 {
   "name": "astigmatism-easy",
   "displayName": "AstigmatismEasy",
-  "description": "A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline, with day and night versions",
-  "version": "1.0.1",
+  "description": "A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline, with day, night, and infrared versions",
+  "version": "1.1.0",
   "publisher": "crypticpy",
   "engines": {
     "vscode": "^1.60.0"
@@ -49,6 +49,11 @@
         "label": "AstigmatismEasy Day",
         "uiTheme": "vs-dark",
         "path": "./themes/astigmatism-easy-day-theme.json"
+      },
+      {
+        "label": "AstigmatismEasy Infrared",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-infrared-theme.json"
       }
     ]
   },

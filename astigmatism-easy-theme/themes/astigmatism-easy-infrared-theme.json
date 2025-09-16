@@ -1,0 +1,941 @@
+// START OF FILE astigmatism-easy-infrared-theme.json
+{
+  "name": "AstigmatismEasy Infrared", // Infrared variant tuned for ultra-low-light work
+  "type": "dark",
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    // Semantic Highlighting provides more context-aware coloring within the infrared palette
+    "parameter": { "foreground": "#F2D6C9", "italic": true }, // Default text tone, italic
+    "property": { "foreground": "#F28CA5" }, // Dusty rose for properties/fields
+    "variable.readonly": { "foreground": "#F28CA5", "italic": true }, // Dusty rose italic for readonly/const variables
+    "type.defaultLibrary": { "foreground": "#FF9780", "bold": true }, // Bold coral for built-in types
+    "class": { "foreground": "#FF9780" }, // Coral for classes
+    "enum": { "foreground": "#FF9780" }, // Coral for enums
+    "interface": { "foreground": "#FF9780", "italic": true }, // Italic coral for interfaces
+    "function.defaultLibrary": { "foreground": "#FFB4A2", "bold": true }, // Bold peach for built-in functions
+    "method": { "foreground": "#FFB4A2" }, // Peach for methods/functions
+    "macro": { "foreground": "#FF6B6B", "bold": true }, // Bold Red for macros
+    "comment.documentation": { "foreground": "#C69A92", "italic": true }, // Match regular comments
+    "namespace": { "foreground": "#FF9780", "italic": true }, // Italic coral for namespaces/modules
+    "decorator": { "foreground": "#FF6B6B", "italic": true }, // Italic crimson for decorators/annotations
+    "typeParameter": { "foreground": "#F28CA5", "italic": true }, // Italic dusty rose for generic type parameters
+    "enumMember": { "foreground": "#FF9E80" }, // Salmon-peach for enum members (often like constants)
+    "event": { "foreground": "#FF7F6E", "italic": true }, // Italic ember for events
+    "modifier": { "foreground": "#FF6B6B", "bold": true }, // Bold Red for access/storage modifiers
+    "regexp": { "foreground": "#F28CA5", "italic": true } // Italic dusty rose for regular expressions
+  },
+  "colors": {
+    // --- Base Editor Colors ---
+    // Rationale: Rose-beige on deep oxblood reduces harsh contrast and keeps the interface red-shifted.
+    "editor.foreground": "#F2D6C9",
+    "editor.background": "#140707F8", // Base background, slightly transparent for OLED smoothness
+    "editorGutter.background": "#140707CC", // Transparent gutter for seamless look
+    "editorWhitespace.foreground": "#2A1111CC", // Subtle gray whitespace markers
+
+    // Line Numbers: Ember active line number for focus without excessive luminance.
+    "editorLineNumber.foreground": "#A26E6980", // Muted gray/brown inactive
+    "editorLineNumber.activeForeground": "#FF7F6E", // Ember active
+
+    // Cursor: Visible ember block cursor
+    "editorCursor.foreground": "#FF7F6E",
+    "editorCursor.background": "#140707", // Match background for block cursor visibility
+
+    // Selection: Subtle translucent crimson layers that preserve text clarity.
+    "editor.selectionBackground": "#C87A7A70", // Gentle rosy veil for selections
+    "editor.selectionHighlightBackground": "#1D0B0B80", // For occurrences of selection
+
+    "editor.lineHighlightBackground": "#8F404059", // Soft ember wash for the current line
+    "editor.lineHighlightBorder":    "#8F4040", // Defined with deeper ember border
+
+    // Diagnostics: Crimson for errors, coral for warnings, peach for info—no blue glow.
+    // Rationale: Warm peach info tones keep contrast gentle while avoiding cool wavelengths.
+    "editorError.foreground": "#FF6B6B90",
+    "editorWarning.foreground": "#FF978090",
+    "editorInfo.foreground": "#FFB4A290", // Peach-infused info tone
+    "editorError.border": "#FF6B6BCC",
+    "editorWarning.border": "#FF9780CC",
+    "editorInfo.border": "#FFB4A2CC",
+
+    // --- Debugging ---
+    // Uses the core warm palette for icons and states. Dusty rose handles neutral actions.
+    "editor.stackFrameHighlightBackground": "#FFB4A2CC", // Subtle peach highlight
+    "editor.focusedStackFrameHighlightBackground": "#FF9780CC", // Subtle coral highlight
+    "debugIcon.breakpointForeground": "#FF6B6B",
+    "debugIcon.breakpointDisabledForeground": "#FF6B6B80",
+    "debugIcon.breakpointUnverifiedForeground": "#A26E69",
+    "debugIcon.startForeground": "#FFB4A2",
+    "debugIcon.stopForeground": "#FF6B6B",
+    "debugIcon.disconnectForeground": "#FF7F6E",
+    "debugIcon.pauseForeground": "#FF9780",
+    "debugIcon.continueForeground": "#FFB4A2",
+    "debugIcon.stepOverForeground": "#F28CA5", // Dusty rose
+    "debugIcon.stepIntoForeground": "#FF9780", // Coral
+    "debugIcon.stepOutForeground": "#F28CA5", // Dusty rose
+    "debugIcon.restartForeground": "#F28CA5", // Dusty rose
+    "debugView.exceptionLabelBackground": "#FF6B6BCC",
+    "debugView.exceptionLabelForeground": "#F2D6C9",
+    "debugView.stateLabelBackground": "#2A1111CC",
+    "debugView.stateLabelForeground": "#F2D6C9",
+    "debugView.valueChangedHighlight": "#FF9780CC", // Coral flash for changed values
+    "debugTokenExpression.name": "#F2D6C9",
+    "debugTokenExpression.value": "#FF9E80",
+    "debugTokenExpression.string": "#FF9E80",
+    "debugTokenExpression.boolean": "#F28CA5",
+    "debugTokenExpression.number": "#F28CA5",
+    "debugTokenExpression.error": "#FF6B6B",
+
+    // --- Widgets (Suggest, Hover, Parameter Hints) ---
+    // Consistent dark crimson backgrounds with ember highlights.
+    "editorWidget.background": "#1D0B0B",
+    "editorWidget.foreground": "#F2D6C9",
+    "editorWidget.border": "#2A1111",
+    "editorWidget.resizeBorder": "#FF7F6ECC", // Subtle ember resize handle
+    "editorSuggestWidget.background": "#1D0B0B",
+    "editorSuggestWidget.foreground": "#F2D6C9",
+    "editorSuggestWidget.highlightForeground": "#FF7F6E", // Ember accent for matching text
+    "editorSuggestWidget.selectedBackground": "#2A1111", // Mid-gray for selected item
+    "editorSuggestWidget.focusHighlightForeground": "#FF9780", // Coral emphasis when focused
+    "editorSuggestWidget.border": "#2A111180",
+    "editorSuggestWidget.selectedIconForeground": "#FF7F6E", // Icon color matches highlight
+    "editorHoverWidget.background": "#1D0B0B",
+    "editorHoverWidget.foreground": "#F2D6C9",
+    "editorHoverWidget.border": "#2A1111",
+    "editorHoverWidget.statusBarBackground": "#140707", // Matches main background
+    "editorHoverWidget.highlightForeground": "#FF7F6E",
+
+    // Inlay Hints: Muted clay keeps hints legible without introducing cool light.
+    // Rationale: Eliminates blue light from hints, relying on subtle contrast and positioning.
+    "editorInlayHint.foreground": "#A26E69CC", // Muted gray/brown text
+    "editorInlayHint.background": "#140707CC", // Transparent background
+    "editorInlayHint.typeForeground": "#A26E6990", // Muted gray/brown for type hints
+    "editorInlayHint.parameterForeground": "#FF9E80CC", // Muted salmon for parameters
+
+    // --- UI Chrome: Activity Bar, Sidebar, Lists ---
+    // Rationale: Ember (#E26E6A) accents drive focus while keeping the chrome entirely red-hued.
+    "activityBar.background": "#140707",
+    "activityBar.foreground": "#F2D6C9",
+    "activityBar.inactiveForeground": "#A26E6980",
+    "activityBar.activeBorder": "#E26E6A", // Ember active indicator
+    "activityBar.activeBackground": "#1D0B0BCC", // Subtle darker background for active item
+    "activityBarBadge.background": "#E26E6A", // Ember badge background
+    "activityBarBadge.foreground": "#140707", // Dark text on badge
+    "sideBar.background": "#140707",
+    "sideBar.foreground": "#F2D6C9",
+    "sideBarTitle.foreground": "#F2D6C9",
+    "sideBarSectionHeader.background": "#1D0B0B",
+    "sideBarSectionHeader.foreground": "#F2D6C9",
+    "sideBarSectionHeader.border": "#E26E6ACC", // Subtle ember section border
+    "list.activeSelectionBackground": "#2A1111", // Mid-gray when list is focused
+    "list.activeSelectionForeground": "#F2D6C9",
+    "list.inactiveSelectionBackground": "#1D0B0B", // Darker gray when list is unfocused
+    "list.inactiveSelectionForeground": "#F2D6C9",
+    "list.hoverBackground": "#1D0B0B", // Dark gray on hover
+    "list.hoverForeground": "#F2D6C9",
+    "list.focusBackground": "#2A111180", // Semi-transparent mid-gray for focused item (non-selected)
+    "list.focusForeground": "#F2D6C9",
+    "list.focusOutline": "#E26E6ACC", // Ember outline for focused item
+    "list.highlightForeground": "#E26E6A", // Ember highlight for filter matches
+    "list.errorForeground": "#FF6B6B90", // Consistent with editor diagnostics
+    "list.warningForeground": "#FF978090", // Consistent with editor diagnostics
+    "list.filterMatchBackground": "#E26E6ACC", // Subtle ember background for filter matches
+    "list.filterMatchBorder": "#E26E6ACC", // Subtle ember border for filter matches
+    "list.invalidItemForeground": "#FF6B6B90", // For invalid items in lists
+
+    // --- Status Bar ---
+    // Standard background, uses warm accents for states.
+    "statusBar.background": "#140707",
+    "statusBar.foreground": "#F2D6C9",
+    "statusBar.debuggingBackground": "#FF6B6B90", // Red tint when debugging
+    "statusBar.debuggingForeground": "#F2D6C9",
+    "statusBar.noFolderBackground": "#1D0B0B", // Darker gray when no folder open
+    "statusBar.noFolderForeground": "#F2D6C9",
+    "statusBarItem.prominentBackground": "#2A1111CC", // Mid-gray for prominent items
+    "statusBarItem.prominentForeground": "#F2D6C9",
+    "statusBarItem.prominentHoverBackground": "#2A111190",
+    "statusBarItem.remoteBackground": "#FFB4A280", // Peach tint for remote connection
+    "statusBarItem.remoteForeground": "#140707", // Dark text on remote background
+    "statusBarItem.errorBackground": "#FF6B6BCC", // Red tint for errors
+    "statusBarItem.errorForeground": "#F2D6C9",
+    "statusBarItem.warningBackground": "#FF9780CC", // Coral tint for warnings
+    "statusBarItem.warningForeground": "#140707", // Dark text on warning background
+    "statusBarItem.activeBackground": "#FF7F6ECC", // Subtle ember background on click
+    "statusBarItem.hoverBackground": "#2A1111CC", // Subtle gray background on hover
+
+    // --- Title Bar (macOS style) ---
+    "titleBar.activeBackground": "#140707",
+    "titleBar.activeForeground": "#F2D6C9",
+    "titleBar.inactiveBackground": "#140707",
+    "titleBar.inactiveForeground": "#A26E69", // Muted gray for inactive window text
+    "titleBar.border": "#140707CC", // No border
+
+    // --- Tabs ---
+    // Rationale: Ember (#FF7F6E) accents reinforce the active tab without leaving the red family.
+    "tab.activeBackground": "#1D0B0B", // Darker gray for active tab
+    "tab.activeForeground": "#F2D6C9",
+    "tab.inactiveBackground": "#140707", // Base background for inactive tabs
+    "tab.inactiveForeground": "#A26E69", // Muted gray for inactive tab text
+    "tab.activeBorderTop": "#FF7F6EA0", // Ember top border for active tab
+    "tab.activeBorder": "#1D0B0B", // Matches active background (no side border)
+    "tab.unfocusedActiveBorder": "#2A1111CC", // Subtle gray border when window is unfocused
+    "tab.unfocusedActiveBorderTop": "#FF7F6ECC", // Muted ember top border when unfocused
+    "tab.unfocusedActiveForeground": "#F2D6C990", // Slightly dimmed text when unfocused
+    "tab.unfocusedInactiveForeground": "#A26E6980", // Very dim text for inactive tabs in unfocused window
+    "tab.hoverBackground": "#1D0B0B80", // Semi-transparent dark gray on hover
+    "tab.hoverForeground": "#F2D6C9",
+    "tab.hoverBorder": "#FF7F6ECC", // Subtle ember border on hover
+    "tab.lastPinnedBorder": "#E26E6A80", // Ember separator for pinned tabs
+
+    // Problems View Icons: Warm colors, consistent with diagnostics.
+    "problemsErrorIcon.foreground": "#FF6B6B", // Standard Red
+    "problemsWarningIcon.foreground": "#FF9780", // Standard coral warning
+    "problemsInfoIcon.foreground": "#FFB4A2", // Standard peach for info
+
+    // --- Breadcrumbs ---
+    // Subtle navigation aid with ember accents for the active element.
+    "breadcrumb.background": "#140707",
+    "breadcrumb.foreground": "#A26E69", // Muted gray
+    "breadcrumb.focusForeground": "#F2D6C9", // Full brightness when focused
+    "breadcrumb.activeSelectionForeground": "#FF7F6E", // Ember for the active part
+    "breadcrumbPicker.background": "#1D0B0B", // Dark gray for picker dropdown
+
+    // --- Panels (Terminal, Output, Problems, Debug Console) ---
+    "panel.background": "#140707",
+    "panel.border": "#1D0B0B", // Dark gray border separating from editor
+    "panelTitle.activeForeground": "#F2D6C9", // Full brightness for active panel title
+    "panelTitle.inactiveForeground": "#A26E69", // Muted gray for inactive panel titles
+    "panelTitle.activeBorder": "#FF7F6ECC", // Subtle ember border below active title
+    "panelInput.border": "#2A1111", // Mid-gray border for input fields in panels
+    "panelSection.border": "#2A1111CC", // Subtle mid-gray border for sections within panels
+    "panelSection.dropBackground": "#FF7F6ECC", // Ember hint for drag-and-drop target
+    "panelSectionHeader.background": "#1D0B0B",
+    "panelSectionHeader.foreground": "#F2D6C9",
+    "panelSectionHeader.border": "#E26E6ACC", // Consistent with sidebar section header
+
+    // --- Git Decorations ---
+    // Clear status indication using standard warm palette accents.
+    "editorGutter.modifiedBackground": "#FF9780CC", // Coral hint in gutter
+    "editorGutter.addedBackground": "#FFB4A2CC", // Peach hint in gutter
+    "editorGutter.deletedBackground": "#FF6B6BCC", // Red hint in gutter
+    "gitDecoration.modifiedResourceForeground": "#FF9780E0", // Bright coral in file explorer
+    "gitDecoration.addedResourceForeground": "#FFB4A2E0", // Bright peach in file explorer
+    "gitDecoration.deletedResourceForeground": "#FF6B6BE0", // Bright Red in file explorer
+    "gitDecoration.untrackedResourceForeground": "#FF9E80E0", // Bright salmon in file explorer
+    "gitDecoration.ignoredResourceForeground": "#A26E69CC", // Very muted gray for ignored files
+    "gitDecoration.conflictingResourceForeground": "#FF7F6EE0", // Bright ember for conflicts
+    "gitDecoration.submoduleResourceForeground": "#F28CA5E0", // Bright dusty rose for submodules
+
+    // --- Diff Editor ---
+    // Uses more subdued colors for backgrounds to maintain text legibility.
+    "diffEditor.insertedTextBackground": "#5C1F1F80", // Deeper scarlet, 50% opacity
+    "diffEditor.removedTextBackground": "#7A2A2A80", // Darker Red, 50% opacity
+    "diffEditor.insertedLineBackground": "#5C1F1F33", // Deeper scarlet, 20% opacity
+    "diffEditor.removedLineBackground": "#7A2A2A33", // Darker Red, 20% opacity
+    "diffEditor.diagonalFill": "#A26E69CC", // Muted gray for diagonal stripes indicating whitespace diffs
+    "diffEditor.border": "#2A1111CC", // Subtle mid-gray border
+    "diffEditorOverview.insertedForeground": "#FFB4A2AA", // Clear peach in overview ruler
+    "diffEditorOverview.removedForeground": "#FF6B6BAA", // Clear Red in overview ruler
+
+    // --- Overview Ruler (Scrollbar Annotations) ---
+    // Rationale: Warm coral, ember, and peach maintain consistency without drifting toward blue.
+    "editorOverviewRuler.border": "#2A1111CC", // Very subtle border
+    "editorOverviewRuler.findMatchForeground": "#FF9780CC", // Coral find matches
+    "editorOverviewRuler.rangeHighlightForeground": "#FF7F6ECC", // Ember range highlight (e.g., search scope)
+    "editorOverviewRuler.selectionHighlightForeground": "#FF9780CC", // Faint coral selection highlight
+    "editorOverviewRuler.wordHighlightForeground": "#E26E6ACC", // Faint ember word highlights
+    "editorOverviewRuler.wordHighlightStrongForeground": "#E26E6ACC", // Stronger ember word highlights (writes)
+    "editorOverviewRuler.modifiedForeground": "#FF978090", // Coral git modification markers
+    "editorOverviewRuler.addedForeground": "#FFB4A290", // Peach git addition markers
+    "editorOverviewRuler.deletedForeground": "#FF6B6B90", // Red git deletion markers
+    "editorOverviewRuler.errorForeground": "#FF6B6BA0", // Slightly more visible Red error markers
+    "editorOverviewRuler.warningForeground": "#FF9780A0", // Slightly more visible coral warning markers
+    "editorOverviewRuler.infoForeground": "#FFB4A2A0", // Slightly more visible peach info markers
+    "editorOverviewRuler.bracketMatchForeground": "#FF978090", // Coral bracket match markers
+
+    // --- Focus & Contrast Borders ---
+    // Rationale: Ember (#FF7F6E) drives focus borders, with coral (#FF9780) providing high-contrast edges.
+    "focusBorder": "#FF7F6E", // Ember focus border around active elements
+    "contrastBorder": "#2A1111CC", // Very subtle border for elements needing distinction in HC mode
+    "contrastActiveBorder": "#FF9780", // Coral active border in HC mode
+
+    // --- Terminal ---
+    // Rationale: Darker background to distinguish terminal from editor. Enhanced syntax highlighting with better contrast.
+    // Terminal background is now darker than editor background to create clear visual separation.
+    "terminal.background": "#180808", // Darker background (from #140707 to #180808)
+    "terminal.foreground": "#F2D6C9", // Keeping base text color for good contrast
+    "terminal.border": "#1D0B0B", // Keeping border color
+    "terminal.selectionBackground": "#2A1111", // Mid-gray selection
+    "terminalCursor.background": "#180808", // Match new background for block cursor
+    "terminalCursor.foreground": "#FF7F6E", // Ember cursor
+    // Enhanced ANSI colors for better syntax highlighting
+    "terminal.ansiBlack": "#2A1111", // Mid-gray (brighter than background)
+    "terminal.ansiRed": "#FF6B6B", // Red - slightly brighter for better visibility on dark background
+    "terminal.ansiGreen": "#FFB4A2", // Peach
+    "terminal.ansiYellow": "#FF9780", // Coral
+    "terminal.ansiBlue": "#C69A92", // Muted clay instead of blue
+    "terminal.ansiMagenta": "#F28CA5", // Dusty rose
+    "terminal.ansiCyan": "#FF9E80", // Salmon cyan
+    "terminal.ansiWhite": "#F2D6C9", // Base text color
+    // Bright variants with increased intensity for better distinction
+    "terminal.ansiBrightBlack": "#A26E69", // Brighter gray for better visibility
+    "terminal.ansiBrightRed": "#FF6B6B", // Bright Red
+    "terminal.ansiBrightGreen": "#FFB4A2", // Bright peach
+    "terminal.ansiBrightYellow": "#FF9780", // Bright coral
+    "terminal.ansiBrightBlue": "#DDB1A9", // Pale clay for better visibility
+    "terminal.ansiBrightMagenta": "#F28CA5", // Bright dusty rose
+    "terminal.ansiBrightCyan": "#FF9E80", // Bright salmon
+    "terminal.ansiBrightWhite": "#FFE6D8", // Brighter white for better contrast
+
+    // --- Bracket Pair Colorization & Guides ---
+    // Rationale: Warm gradient keeps bracket pairs legible without leaving the red spectrum.
+    "editorBracketHighlight.foreground1": "#FFB090", // Earthy apricot
+    "editorBracketHighlight.foreground2": "#F28CA5D0", // Dusty rose
+    "editorBracketHighlight.foreground3": "#FF9780D0", // Coral
+    "editorBracketHighlight.foreground4": "#FF6B6BD0", // Red
+    "editorBracketHighlight.foreground5": "#E26E6AD0", // Ember
+    "editorBracketHighlight.foreground6": "#FF7F6ED0", // Ember-glow
+    "editorBracketHighlight.unexpectedBracket.foreground": "#FF6B6B", // Bright Red for errors
+    "editorBracketMatch.background": "#FF9780CC", // Subtle coral background for matching bracket
+    "editorBracketMatch.border": "#FF9780CC", // Subtle coral border for matching bracket
+    "editorBracketPairGuide.activeBackground1": "#FFB090CC", // Matched active guide colors to bracket colors
+    "editorBracketPairGuide.activeBackground2": "#F28CA5CC",
+    "editorBracketPairGuide.activeBackground3": "#FF9780CC",
+    "editorBracketPairGuide.activeBackground4": "#FF6B6BCC",
+    "editorBracketPairGuide.activeBackground5": "#E26E6ACC",
+    "editorBracketPairGuide.activeBackground6": "#FF7F6ECC",
+    "editorBracketPairGuide.background1": "#FFB090CC", // Matched inactive guide colors to bracket colors
+    "editorBracketPairGuide.background2": "#F28CA5CC",
+    "editorBracketPairGuide.background3": "#FF9780CC",
+    "editorBracketPairGuide.background4": "#FF6B6BCC",
+    "editorBracketPairGuide.background5": "#E26E6ACC",
+    "editorBracketPairGuide.background6": "#FF7F6ECC",
+
+    // --- Input Controls, Dropdowns, Buttons ---
+    // Consistent dark crimsons, ember active borders, and peach info state.
+    "input.background": "#1D0B0B",
+    "input.foreground": "#F2D6C9",
+    "input.placeholderForeground": "#A26E6990", // Muted gray for placeholder text
+    "inputOption.activeBackground": "#2A111180", // Mid-gray for active filter/option
+    "inputOption.activeBorder": "#FF7F6E80", // Ember border for active option
+    "inputOption.activeForeground": "#F2D6C9",
+    "inputOption.hoverBackground": "#2A1111CC", // Subtle hover
+    "inputValidation.errorBackground": "#FF6B6BCC", // Red tint background for error
+    "inputValidation.errorBorder": "#FF6B6B90", // Red border for error
+    "inputValidation.errorForeground": "#F2D6C9",
+    "inputValidation.infoBackground": "#FFB4A2CC", // Peach tint background for info
+    "inputValidation.infoBorder": "#FFB4A290", // Peach border for info
+    "inputValidation.infoForeground": "#F2D6C9",
+    "inputValidation.warningBackground": "#FF9780CC", // Coral tint background for warning
+    "inputValidation.warningBorder": "#FF978090", // Coral border for warning
+    "inputValidation.warningForeground": "#F2D6C9",
+    "dropdown.background": "#1D0B0B",
+    "dropdown.foreground": "#F2D6C9",
+    "dropdown.border": "#2A111180",
+    "dropdown.listBackground": "#1D0B0B", // Ensure dropdown list matches
+    "button.background": "#2A1111", // Mid-gray primary button
+    "button.foreground": "#F2D6C9",
+    "button.hoverBackground": "#3D1616", // Slightly darker warm gray on hover
+    "button.secondaryBackground": "#1D0B0B", // Darker gray secondary button
+    "button.secondaryForeground": "#F2D6C9",
+    "button.secondaryHoverBackground": "#2A1111", // Mid-gray secondary hover
+
+    // --- Scrollbars ---
+    // Subtle, non-distracting warm grays.
+    "scrollbarSlider.background": "#2A111180", // Semi-transparent mid-gray slider
+    "scrollbarSlider.hoverBackground": "#3D161680", // Darker gray on hover
+    "scrollbarSlider.activeBackground": "#A26E6980", // Muted gray when dragging
+    "scrollbar.shadow": "#140707CC", // Subtle shadow where scrollbar meets content
+
+    // --- Badges, Progress Bar ---
+    // Rationale: Peach aligns with the info diagnostic color for consistency.
+    "badge.background": "#FFB4A2",
+    "badge.foreground": "#140707", // Dark text on badge
+    "progressBar.background": "#FFB4A2",
+
+    // --- Minimap ---
+    // Styled consistently with warm palette, keeping highlights coral.
+    "minimap.background": "#14070780", // Semi-transparent background
+    "minimap.errorHighlight": "#FF6B6B90",
+    "minimap.findMatchHighlight": "#FF9780CC", // Coral find matches
+    "minimap.selectionHighlight": "#2A111190",
+    "minimap.warningHighlight": "#FF978090", // Coral warnings
+    "minimapGutter.addedBackground": "#FFB4A290",
+    "minimapGutter.deletedBackground": "#FF6B6B90",
+    "minimapGutter.modifiedBackground": "#FF978090",
+    "minimapSlider.background": "#2A1111CC",
+    "minimapSlider.hoverBackground": "#2A111180",
+    "minimapSlider.activeBackground": "#2A1111A0",
+
+    // --- Notebooks ---
+    // Clear cell separation and status indication using warm accents. Ember focus.
+    "notebook.cellBorderColor": "#2A1111",
+    "notebook.cellHoverBackground": "#1D0B0BCC",
+    "notebook.cellInsertionIndicator": "#FF7F6ECC", // Ember line for insertion point
+    "notebook.cellStatusBarItemHoverBackground": "#2A1111",
+    "notebook.cellToolbarSeparator": "#2A1111",
+    "notebook.focusedCellBackground": "#1D0B0BCC", // Subtle dark gray background for focused cell
+    "notebook.focusedCellBorder": "#FF7F6ECC", // Subtle ember border for focused cell
+    "notebook.focusedEditorBorder": "#FF7F6ECC", // Subtle ember border for focused editor within cell
+    "notebook.inactiveFocusedCellBorder": "#2A1111", // Mid-gray border when cell focused but window inactive
+    "notebook.selectedCellBackground": "#1D0B0BCC", // Subtle dark gray for selected (non-focused) cell
+    "notebook.symbolHighlightBackground": "#FF9780CC", // Coral hint for symbol highlights in notebook
+    "notebookScrollbarSlider.activeBackground": "#A26E69CC", // Consistent with editor scrollbar
+    "notebookScrollbarSlider.background": "#2A1111CC",
+    "notebookScrollbarSlider.hoverBackground": "#3D1616CC",
+    "notebookStatusErrorIcon.foreground": "#FF6B6B90", // Consistent with diagnostics
+    "notebookStatusRunningIcon.foreground": "#FF9780", // Coral for running
+    "notebookStatusSuccessIcon.foreground": "#FFB4A2", // Peach for success
+    "notebook.outputContainerBackgroundColor": "#190909", // Slightly different dark gray for output area
+    "notebook.outputContainerBorderColor": "#2A1111",
+
+    // --- Find/Search/Highlight ---
+    // Rationale: Coral (#FF9780) find and symbol highlights stay readable while remaining soothing.
+    "editor.findMatchBackground": "#FF9780CC", // Subtle coral background for current find match
+    "editor.findMatchHighlightBackground": "#FF9780CC", // Even subtler coral for other find matches
+    "editor.findRangeHighlightBackground": "#2A1111CC", // Subtle gray for find range limit
+    "editor.hoverHighlightBackground": "#2A1111CC", // Subtle gray for hover highlight (e.g., variable definition)
+    "editor.wordHighlightBackground": "#2A1111CC", // Subtle gray for variable read occurrences
+    "editor.wordHighlightStrongBackground": "#2A1111CC", // Slightly stronger gray for variable write occurrences
+    "editor.findMatchBorder": "#FF9780CC", // Coral border for current find match
+    "editor.findMatchHighlightBorder": "#FF9780CC", // Subtle coral border for other find matches
+    "editor.symbolHighlightBackground": "#FF9780CC", // Subtle coral background for symbol occurrences
+    "editor.symbolHighlightBorder": "#FF9780CC", // Subtle coral border for symbol occurrences
+
+    // --- Peek View (Go to Definition/Reference Preview) ---
+    // Rationale: Coral (#FF9780) highlights paired with ember (#E26E6A) borders for peek views.
+    "peekView.border": "#E26E6A80", // Ember border for peek view popup
+    "peekViewEditor.background": "#140707", // Standard editor background
+    "peekViewEditor.matchHighlightBackground": "#FF9780CC", // Coral background for matches inside peek editor
+    "peekViewEditor.matchHighlightBorder": "#FF9780CC", // Coral border for matches inside peek editor
+    "peekViewEditorGutter.background": "#140707", // Standard gutter background
+    "peekViewResult.background": "#1D0B0B", // Dark gray for results list
+    "peekViewResult.fileForeground": "#F2D6C9",
+    "peekViewResult.lineForeground": "#F2D6C9B0", // Slightly dimmed line numbers
+    "peekViewResult.matchHighlightBackground": "#FF9780CC", // Coral background for matches in results list
+    "peekViewResult.selectionBackground": "#2A1111", // Mid-gray selection in results list
+    "peekViewResult.selectionForeground": "#F2D6C9",
+    "peekViewTitle.background": "#1D0B0B", // Dark gray title area
+    "peekViewTitleDescription.foreground": "#A26E69", // Muted gray description (e.g., file path)
+    "peekViewTitleLabel.foreground": "#F2D6C9", // Standard text for title label (e.g., "Results")
+
+    // --- Merge Conflicts --- // NEW SECTION
+    "merge.currentHeaderBackground": "#FFB4A240",
+    "merge.currentContentBackground": "#FFB4A226",
+    "merge.incomingHeaderBackground": "#FF9E8040",
+    "merge.incomingContentBackground": "#FF9E8026",
+    "merge.commonHeaderBackground": "#A26E6940",
+    "merge.commonContentBackground": "#A26E6926",
+    "merge.border": "#2A1111",
+    "editorOverviewRuler.commonContentForeground": "#A26E6999",
+    "editorOverviewRuler.currentContentForeground": "#8F4040", // Ember indicator for current line (matches line highlight)
+    "editorOverviewRuler.incomingContentForeground": "#FF9E8099",
+
+    // --- Notifications --- // NEW SECTION
+    "notificationCenter.border": "#2A1111",
+    "notificationCenterHeader.foreground": "#F2D6C9",
+    "notificationCenterHeader.background": "#1D0B0B",
+    "notificationToast.border": "#E26E6AA0",
+    "notifications.foreground": "#F2D6C9",
+    "notifications.background": "#1D0B0B",
+    "notifications.border": "#2A1111",
+    "notificationsErrorIcon.foreground": "#FF6B6B",
+    "notificationsWarningIcon.foreground": "#FF9780",
+    "notificationsInfoIcon.foreground": "#FFB4A2",
+
+    // --- Sash --- // NEW SECTION
+    "sash.hoverBorder": "#FF7F6E",
+
+    // --- Indent Guides --- // UPDATED TO NEW FORMAT
+    "editorIndentGuide.background1": "#2A111199", // Subtle gray for inactive guides (applies to all levels)
+    "editorIndentGuide.activeBackground1": "#FF7F6EB3" // Ember for active guides (applies to all levels)
+  },
+
+  // --- Token Colors (Syntax Highlighting) ---
+  // Uses TextMate scopes for broad language compatibility, enhanced by semantic tokens above.
+  "tokenColors": [
+    // Comments: Muted warm brown/gray, italicized for deemphasis.
+    {
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": { "foreground": "#C69A92", "fontStyle": "italic" }
+    },
+    // Keywords & Storage: Core language constructs in soft Red.
+    {
+      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "settings": { "foreground": "#FF6B6B" }
+    },
+    // Operators & Core Punctuation: Ember for symbols.
+    {
+      "scope": [
+        "keyword.operator",
+        "punctuation.separator",
+        "punctuation.terminator"
+      ],
+      "settings": { "foreground": "#FF7F6E" }
+    },
+    // Brackets, Braces, Parentheses, String Quotes: Desaturated ember to reduce visual noise.
+    {
+      "scope": [
+        "punctuation.definition",
+        "punctuation.section",
+        "meta.brace",
+        "punctuation.definition.parameters.begin",
+        "punctuation.definition.parameters.end",
+        "punctuation.definition.brackets",
+        "meta.brackets",
+        "punctuation.accessor",
+        "punctuation.definition.string.begin",
+        "punctuation.definition.string.end",
+        "punctuation.definition.template-expression.begin",
+        "punctuation.definition.template-expression.end"
+      ],
+      "settings": { "foreground": "#FF7F6EA0" }
+    },
+    // Strings: Gentle salmon-peach to stay within the red spectrum.
+    {
+      "scope": ["string", "string.quoted", "string.template"],
+      "settings": { "foreground": "#FF9E80" }
+    },
+    // Constants, Numbers, Booleans: Dusty rose-lilac for separation.
+    {
+      "scope": [
+        "constant.numeric",
+        "constant.language",
+        "constant.character",
+        "constant.other"
+      ],
+      "settings": { "foreground": "#F28CA5" }
+    },
+    // Types, Classes, Structs, Built-in Support Types: Soft coral-champagne.
+    {
+      "scope": [
+        "entity.name.type",
+        "entity.other.inherited-class",
+        "support.type"
+      ],
+      "settings": { "foreground": "#FF9780" }
+    },
+    // Functions & Methods, Built-in Support Functions: Warm peach.
+    {
+      "scope": [
+        "entity.name.function",
+        "support.function",
+        "meta.function-call"
+      ],
+      "settings": { "foreground": "#FFB4A2" }
+    },
+    // Variables: Default text color (Warm Beige) for standard variables.
+    {
+      "scope": [
+        "variable",
+        "support.variable",
+        "variable.other",
+        "meta.definition.variable"
+      ],
+      "settings": { "foreground": "#F2D6C9" }
+    },
+    // `this`, `self`, `super`: Red italic for emphasis on context object.
+    {
+      "scope": [
+        "variable.language.this",
+        "variable.language.self",
+        "variable.language.super"
+      ],
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "italic" }
+    },
+    // HTML/XML Tags: Red for tag names.
+    {
+      "scope": ["entity.name.tag", "punctuation.definition.tag"],
+      "settings": { "foreground": "#FF6B6B" }
+    },
+    // HTML/XML Attributes: Coral for attribute names.
+    {
+      "scope": ["entity.other.attribute-name"],
+      "settings": { "foreground": "#FF9780" }
+    },
+
+    // --- Language-Specific Enhancements ---
+
+    // Rust
+    {
+      "scope": "entity.name.lifetime.rust",
+      "settings": { "foreground": "#FF7F6E", "fontStyle": "italic" }
+    }, // Ember italic lifetimes 'a
+    {
+      "scope": "storage.modifier.lifetime.rust",
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "italic" }
+    }, // Red italic lifetime keyword '
+    {
+      "scope": "entity.name.type.trait.rust",
+      "settings": { "foreground": "#FF9780", "fontStyle": "italic" }
+    }, // Italic coral traits
+    { "scope": "meta.attribute.rust", "settings": { "foreground": "#F28CA5" } }, // Dusty rose attributes #[...]
+    { "scope": "meta.macro.rust", "settings": { "foreground": "#FF6B6B" } }, // Red macros!
+
+    // C/C++
+    {
+      "scope": "storage.modifier.pointer.cpp",
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "bold" }
+    }, // Bold red pointers *
+    {
+      "scope": "storage.modifier.reference.cpp",
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "bold" }
+    }, // Bold red references &
+    {
+      "scope": "entity.name.scope-resolution.cpp",
+      "settings": { "foreground": "#FF9780" }
+    }, // Coral scope resolution ::
+    {
+      "scope": "entity.name.namespace.cpp",
+      "settings": { "foreground": "#FF9780", "fontStyle": "italic" }
+    }, // Italic coral namespaces
+
+    // Go
+    { "scope": "keyword.type.go", "settings": { "foreground": "#FF9780" } }, // Go `type` keyword coral
+    {
+      "scope": "entity.name.package.go",
+      "settings": { "foreground": "#FF9E80" }
+    }, // Salmon packages
+    {
+      "scope": "entity.name.import.go",
+      "settings": { "foreground": "#FF9E80" }
+    }, // Salmon imports
+
+    // SQL
+    {
+      "scope": ["keyword.other.DDL", "keyword.other.DML", "keyword.other.sql"],
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "bold" }
+    }, // Core SQL verbs bold red
+    {
+      "scope": "entity.name.function.sql",
+      "settings": { "foreground": "#FFB4A2" }
+    }, // SQL functions peach
+    {
+      "scope": "constant.numeric.sql",
+      "settings": { "foreground": "#F28CA5" }
+    }, // SQL numbers dusty rose
+    { "scope": "storage.type.sql", "settings": { "foreground": "#FF9780" } }, // SQL data types coral
+    {
+      "scope": [
+        "keyword.other.order.sql",
+        "keyword.other.join.sql",
+        "keyword.other.group.sql"
+      ],
+      "settings": { "foreground": "#FF7F6E", "fontStyle": "bold" }
+    }, // Clauses bold ember
+
+    // Python
+    {
+      "scope": ["keyword.control.import.python", "keyword.control.flow.python"],
+      "settings": { "foreground": "#FF6B6B" }
+    }, // Imports/flow control standard keyword red
+    {
+      "scope": "support.function.builtin.python",
+      "settings": { "foreground": "#FFB4A2", "fontStyle": "italic" }
+    }, // Italic peach for builtins (print, len)
+    {
+      "scope": "support.type.python",
+      "settings": { "foreground": "#FF9780", "fontStyle": "italic" }
+    }, // Italic coral for builtin types (str, int)
+    {
+      "scope": "meta.function-call.generic.python",
+      "settings": { "foreground": "#FFB4A2" }
+    }, // Function calls warm peach
+    {
+      "scope": "meta.function.parameters.python variable.parameter",
+      "settings": { "foreground": "#F2D6C9", "fontStyle": "italic" }
+    }, // Italic default text for parameters
+    {
+      "scope": "entity.name.function.decorator.python",
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "italic" }
+    }, // Italic Red for decorators @
+    {
+      "scope": "support.variable.magic.python",
+      "settings": { "foreground": "#F28CA5", "fontStyle": "italic" }
+    }, // Italic dusty rose for __dunder__ methods/variables
+    {
+      "scope": "string.interpolated.python .string",
+      "settings": { "foreground": "#FF9E80" }
+    }, // f-string content standard string color
+    {
+      "scope": "string.interpolated.python .meta.interpolation",
+      "settings": { "foreground": "#F2D6C9" }
+    }, // Code inside {} default text color
+    {
+      "scope": "constant.character.format.placeholder.python",
+      "settings": { "foreground": "#FF7F6EE0", "fontStyle": "italic" }
+    }, // %s, %d placeholders ember italic
+    {
+      "scope": "string.quoted.docstring.multi.python",
+      "settings": { "foreground": "#C69A92", "fontStyle": "italic" }
+    }, // Docstrings same as comments
+    {
+      "scope": "meta.type.annotation.python .entity.name.type",
+      "settings": { "foreground": "#FF9780E0" }
+    }, // Type hints bright coral
+    {
+      "scope": "meta.type.annotation.python .support.type",
+      "settings": { "foreground": "#FF9780E0", "fontStyle": "italic" }
+    }, // Built-in type hints bright italic coral
+
+    // JavaScript / TypeScript / JSX / TSX
+    {
+      "scope": ["support.class.component.jsx", "support.class.component.tsx"],
+      "settings": { "foreground": "#FF9780", "fontStyle": "bold" }
+    }, // React class components bold coral
+    {
+      "scope": ["entity.name.function.jsx", "entity.name.function.tsx"],
+      "settings": { "foreground": "#FF9780" }
+    }, // React functional components coral (often treated as types)
+    {
+      "scope": [
+        "meta.tag.jsx .entity.name.tag",
+        "meta.tag.tsx .entity.name.tag"
+      ],
+      "settings": { "foreground": "#FF6B6B" }
+    }, // JSX tags red
+    {
+      "scope": [
+        "meta.tag.jsx .entity.other.attribute-name",
+        "meta.tag.tsx .entity.other.attribute-name"
+      ],
+      "settings": { "foreground": "#FF9780" }
+    }, // JSX attributes coral
+    {
+      "scope": [
+        "support.type.primitive.ts",
+        "support.type.primitive.tsx",
+        "support.type.builtin.ts",
+        "support.type.builtin.tsx"
+      ],
+      "settings": { "foreground": "#FF9780", "fontStyle": "italic" }
+    }, // TS primitives italic coral
+    {
+      "scope": [
+        "meta.object-literal.key.js",
+        "meta.object-literal.key.ts",
+        "meta.object-literal.key.tsx"
+      ],
+      "settings": { "foreground": "#F28CA5" }
+    }, // Object keys dusty rose (like properties)
+    {
+      "scope": [
+        "variable.other.constant.js",
+        "variable.other.constant.ts",
+        "variable.other.constant.tsx"
+      ],
+      "settings": { "foreground": "#F28CA5" }
+    }, // Constants dusty rose (semantic `variable.readonly` might make italic)
+    {
+      "scope": [
+        "string.template.js",
+        "string.template.ts",
+        "string.template.tsx"
+      ],
+      "settings": { "foreground": "#FF9E80" }
+    }, // Template literal content salmon
+    {
+      "scope": [
+        "meta.template.expression.js",
+        "meta.template.expression.ts",
+        "meta.template.expression.tsx"
+      ],
+      "settings": { "foreground": "#F2D6C9" }
+    }, // Code inside ${} default text
+    {
+      "scope": [
+        "support.function.hooks.js",
+        "support.function.hooks.ts",
+        "support.function.hooks.jsx",
+        "support.function.hooks.tsx"
+      ],
+      "settings": { "foreground": "#FFB4A2", "fontStyle": "italic" }
+    }, // React hooks italic peach
+
+    // Swift
+    {
+      "scope": "keyword.declaration.swift",
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "bold" }
+    }, // `func`, `class`, etc. bold red
+    {
+      "scope": "entity.name.function.swift",
+      "settings": { "foreground": "#FFB4A2" }
+    }, // Function names warm peach
+    {
+      "scope": "keyword.operator.swift",
+      "settings": { "foreground": "#FF7F6E" }
+    }, // Operators ember
+    { "scope": "storage.type.swift", "settings": { "foreground": "#FF9780" } }, // Type keywords coral
+
+    // Kotlin
+    {
+      "scope": "keyword.other.kotlin",
+      "settings": { "foreground": "#FF6B6B" }
+    }, // Keywords Red
+    {
+      "scope": "entity.name.package.kotlin",
+      "settings": { "foreground": "#FF9E80", "fontStyle": "italic" }
+    }, // Italic salmon packages
+    {
+      "scope": "variable.parameter.function.kotlin",
+      "settings": { "foreground": "#F2D6C9", "fontStyle": "italic" }
+    }, // Italic default text parameters
+
+    // GraphQL
+    {
+      "scope": "keyword.operation.graphql",
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "bold" }
+    }, // `query`, `mutation` bold red
+    {
+      "scope": "entity.name.fragment.graphql",
+      "settings": { "foreground": "#FF9780", "fontStyle": "italic" }
+    }, // Fragment names italic coral
+    {
+      "scope": "variable.graphql",
+      "settings": { "foreground": "#F2D6C9", "fontStyle": "italic" }
+    }, // $variable italic default text
+
+    // Python Notebook specific (for .ipynb files within VS Code)
+    {
+      "scope": "markup.heading.markdown.jupyter",
+      "settings": { "foreground": "#FF9780", "fontStyle": "bold" }
+    }, // Markdown Headings in notebooks coral bold
+    {
+      "scope": "markup.raw.code-fence.jupyter",
+      "settings": { "foreground": "#F2D6C9" }
+    }, // Code blocks default text
+    {
+      "scope": "markup.raw.delimiter.jupyter",
+      "settings": { "foreground": "#A06C67" }
+    }, // Code block ``` muted gray
+    {
+      "scope": "text.html.markdown.jupyter",
+      "settings": { "foreground": "#F2D6C9" }
+    }, // Markdown text default
+    {
+      "scope": "markup.output.jupyter",
+      "settings": { "foreground": "#C69A92" }
+    }, // Standard output muted brown/gray
+    { "scope": "meta.output.jupyter", "settings": { "foreground": "#C69A92" } },
+    {
+      "scope": ["markup.output.stderr.jupyter", "markup.output.error.jupyter"],
+      "settings": { "foreground": "#FF6B6B90" }
+    }, // Error output muted red
+    {
+      "scope": "punctuation.output.jupyter",
+      "settings": { "foreground": "#3D1616" }
+    }, // Output punctuation darker gray
+
+    // Enhanced Markdown for documentation
+    // Rationale: Clear hierarchy using warm reds, avoiding blue for links.
+    {
+      "scope": ["markup.heading.markdown", "entity.name.section.markdown"],
+      "settings": { "foreground": "#FF6B6B", "fontStyle": "bold" }
+    }, // Headings bold red
+    {
+      "scope": ["markup.bold.markdown"],
+      "settings": { "foreground": "#FF9780", "fontStyle": "bold" }
+    }, // Bold coral
+    {
+      "scope": ["markup.italic.markdown"],
+      "settings": { "foreground": "#F28CA5", "fontStyle": "italic" }
+    }, // Italic dusty rose
+    {
+      "scope": ["markup.quote.markdown"],
+      "settings": { "foreground": "#FFB4A2", "fontStyle": "italic" }
+    }, // Quotes italic peach
+    {
+      "scope": [
+        "markup.inline.raw.string.markdown",
+        "markup.fenced_code.block.markdown"
+      ],
+      "settings": { "foreground": "#FF9E80" }
+    }, // Code blocks/inline code salmon
+    {
+      "scope": [
+        "markup.list.unnumbered.markdown",
+        "markup.list.numbered.markdown"
+      ],
+      "settings": { "foreground": "#F2D6C9" }
+    }, // List items default text
+    {
+      "scope": ["punctuation.definition.list.begin.markdown"],
+      "settings": { "foreground": "#FF7F6E" }
+    }, // List markers (*, -, 1.) ember
+    {
+      "scope": [
+        "markup.underline.link.markdown",
+        "string.other.link.title.markdown",
+        "string.other.link.description.markdown"
+      ],
+      "settings": { "foreground": "#FF9E80" }
+    }, // Links salmon
+    {
+      "scope": [
+        "punctuation.definition.link",
+        "punctuation.definition.metadata.markdown"
+      ],
+      "settings": { "foreground": "#FF9E8080" }
+    }, // Link brackets/parentheses muted salmon
+
+    // JSON
+    {
+      "scope": "support.type.property-name.json",
+      "settings": { "foreground": "#F28CA5" }
+    }, // Keys dusty rose
+    {
+      "scope": "constant.language.json",
+      "settings": { "foreground": "#FF9780" }
+    }, // true, false, null coral
+    {
+      "scope": "string.quoted.double.json",
+      "settings": { "foreground": "#FF9E80" }
+    }, // String values salmon
+    {
+      "scope": "constant.numeric.json",
+      "settings": { "foreground": "#F28CA5" }
+    }, // Numbers dusty rose
+
+    // YAML
+    {
+      "scope": "entity.name.tag.yaml",
+      "settings": { "foreground": "#F28CA5" }
+    }, // Keys dusty rose
+    {
+      "scope": "punctuation.separator.key-value.yaml",
+      "settings": { "foreground": "#FF7F6EA0" }
+    }, // Colon separator muted ember
+    {
+      "scope": "string.unquoted.plain.out.yaml",
+      "settings": { "foreground": "#F2D6C9" }
+    }, // Plain string values default text
+    {
+      "scope": "string.quoted.single.yaml",
+      "settings": { "foreground": "#FF9E80" }
+    }, // Quoted strings salmon
+    {
+      "scope": "string.quoted.double.yaml",
+      "settings": { "foreground": "#FF9E80" }
+    },
+    {
+      "scope": "constant.numeric.yaml",
+      "settings": { "foreground": "#F28CA5" }
+    }, // Numbers dusty rose
+    {
+      "scope": "constant.language.yaml",
+      "settings": { "foreground": "#FF9780" }
+    }, // true, false, null coral
+
+    // Generic Fallbacks/Emphasis
+    { "scope": "markup.inserted", "settings": { "foreground": "#FFB4A2" } }, // Peach for added text (e.g., Git diff in commit message)
+    { "scope": "markup.deleted", "settings": { "foreground": "#FF6B6B" } }, // Red for deleted text
+    { "scope": "markup.changed", "settings": { "foreground": "#FF9780" } }, // Coral for changed text
+    {
+      "scope": "invalid",
+      "settings": { "foreground": "#FF6B6B" }
+    }, // Red foreground, subtle red background for invalid code
+    {
+      "scope": "invalid.deprecated",
+      "settings": { "foreground": "#A26E69", "fontStyle": "strikethrough" }
+    } // Muted gray strikethrough for deprecated code
+  ]
+}
+// END OF FILE astigmatism-easy-warm-final.json

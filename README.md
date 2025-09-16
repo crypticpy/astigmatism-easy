@@ -1,15 +1,21 @@
 # AstigmatismEasy Theme
 
-A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline. Available in both **Night** and **Daylight** versions to support your entire coding workflow. The Night version is specifically designed for coding in low-light environments, especially beneficial for those wearing prismatic neuro lens glasses, while the Daylight version provides enhanced visibility and comfort in brighter conditions.
+A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline. Available in **Night**, **Daylight**, and the new **Infrared** variant to support your entire coding workflow. The Night version is specifically designed for coding in low-light environments, especially beneficial for those wearing prismatic neuro lens glasses, the Daylight version provides enhanced visibility and comfort in brighter conditions, and the Infrared variant delivers an almost entirely red-shifted experience for ultra-low-light sessions.
 
 > _Screenshot omitted to keep the repository free of binary assets required by some contribution workflows._
 
-## 🌓 Daylight and Night Versions
+## 🌓 Theme Variants
 
-AstigmatismEasy now comes in two variants to support your entire coding workflow:
+AstigmatismEasy now comes in three variants to support your entire coding workflow:
 
 ### Night Theme
 Optimized for low-light environments, the Night theme preserves dark adaptation and minimizes halation effects that are particularly problematic for developers with astigmatism when working in the dark. It uses the original deep contrast and color calibrations ideal for minimal ambient light.
+
+### Infrared Theme (NEW)
+Designed for extremely low ambient light (think planetarium, observatory, or red-room conditions), the Infrared theme keeps the entire UI—chrome, diagnostics, and syntax—within carefully tuned reds, corals, and peaches. Key characteristics include:
+- Deeper oxblood background (`#140707`) with softened transparency to maintain OLED smoothness without producing hard edges.
+- Rose-beige body text (`#F2D6C9`) and a full syntax palette of crimson, salmon, and peach hues that stay legible without injecting blue light.
+- Diagnostics, terminal colors, and focus states recast in ember tones so the whole workspace remains red-shifted for long sessions without disrupting dark adaptation.
 
 ### Daylight Theme
 The Daylight theme adapts the core scientific principles for use in rooms with more ambient light while remaining a dark theme. It features:
@@ -41,9 +47,9 @@ Astigmatism causes light to focus unevenly, leading to blurred or ghosted vision
 - Maintains optimal contrast ratios (typically 5:1 to 11:1) for all text elements, ensuring readability without excessive brightness that could exacerbate glare or halation.
 - Avoids extreme contrast boundaries that worsen astigmatic haloing and can be particularly distracting when viewed through corrective lenses.
 
-### Scientific Color Selection (Core Editor)
+### Scientific Color Selection (Night & Daylight Editors)
 
-Every color in this theme has been chosen based on vision science principles. The following table reflects the core syntax highlighting colors against the editor background, consistent across both Night and Daylight versions for the main coding area:
+Every color in these themes has been chosen based on vision science principles. The following table reflects the core syntax highlighting colors against the editor background, consistent across both Night and Daylight versions for the main coding area:
 
 | Element  | Color   | Contrast (vs #282828) | Scientific Rationale                                                              |
 |----------|---------|-----------------------|-----------------------------------------------------------------------------------|
@@ -53,6 +59,21 @@ Every color in this theme has been chosen based on vision science principles. Th
 | Strings  | #8EC07C | 7.0:1                 | Green-teal is easier to focus than blue while remaining distinguishable           |
 | Numbers  | #D3869B | 6.0:1                 | Desaturated purple provides contrast without excessive brightness                 |
 | Comments | #BDAE93 | 6.3:1                 | Intentionally lower contrast for deemphasis while remaining legible & warm         |
+### Infrared Variant Palette
+
+The Infrared theme retains the same ergonomic philosophy while shifting every accent toward the red spectrum:
+
+| Element  | Color   | Contrast (vs #140707) | Scientific Rationale |
+|----------|---------|-----------------------|----------------------|
+| Background | #140707 | - | Deep oxblood keeps luminance extremely low without going pitch black |
+| Text     | #F2D6C9 | 14.3:1 | Rose-beige foreground keeps glyphs clear while avoiding blue components |
+| Keywords | #FF6B6B | 7.1:1 | Crimson keywords provide emphasis without harsh saturation |
+| Strings  | #FF9E80 | 9.8:1 | Salmon-peach strings preserve readability while staying in warm wavelengths |
+| Numbers  | #F28CA5 | 8.5:1 | Dusty rose numerics separate literals without bright halos |
+| Functions | #FFB4A2 | 11.6:1 | Peach-toned functions maintain hierarchy and strong contrast |
+| Types    | #FF9780 | 9.4:1 | Coral types highlight structure while keeping the palette cohesive |
+| Comments | #C69A92 | 7.9:1 | Muted clay comments stay legible yet comfortably subdued |
+
 
 ## ✨ Optimized for Mini LED & OLED at High Refresh Rates
 
@@ -92,7 +113,7 @@ This theme includes specific optimizations for developers using high-end display
 
 ## 🎨 Color Palette (Core)
 
-The theme uses a carefully calibrated warm color palette for core syntax highlighting:
+The Night and Daylight themes use a carefully calibrated warm color palette for core syntax highlighting (the Infrared palette is detailed above):
 
 - **Background**: `#282828` (very dark warm gray)
 - **Text**: `#EBDBB2` (warm beige)
