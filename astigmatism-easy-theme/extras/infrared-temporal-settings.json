@@ -1,0 +1,22 @@
+{
+  "workbench.list.smoothScrolling": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.cursorWidth": 2,
+  "editor.cursorStyle": "line",
+  "editor.smoothScrolling": false,
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.fontLigatures": false,
+  "editor.lineHeight": 1.5,
+  "editor.letterSpacing": 0.4,
+  "editor.find.autoFindInSelection": true,
+  "terminal.integrated.cursorBlinking": false,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.smoothScrolling": false,
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeightBold": "600"
+}
