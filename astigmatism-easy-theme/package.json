@@ -1,9 +1,9 @@
 {
   "name": "astigmatism-easy",
   "displayName": "AstigmatismEasy",
-  "description": "A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline, with day, night, and infrared versions",
-  "version": "1.1.0",
-  "publisher": "crypticpy",
+  "description": "A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline, with day and night versions",
+  "version": "1.0.0",
+  "publisher": "Christopher Collins",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -26,6 +26,7 @@
     "mini led",
     "oled"
   ],
+  "icon": "icon.png",
   "galleryBanner": {
     "color": "#282828",
     "theme": "dark"
@@ -34,34 +35,54 @@
     "type": "git",
     "url": "https://github.com/crypticpy/astigmatism-easy"
   },
-  "bugs": {
-    "url": "https://github.com/crypticpy/astigmatism-easy/issues"
-  },
-  "homepage": "https://github.com/crypticpy/astigmatism-easy#readme",
   "contributes": {
     "themes": [
       {
-        "label": "AstigmatismEasy Night",
+        "label": "AstigmatismEasy Night — Halation Guard",
         "uiTheme": "vs-dark",
         "path": "./themes/astigmatism-easy-night-theme.json"
       },
       {
-        "label": "AstigmatismEasy Day",
+        "label": "AstigmatismEasy Daylight — Harmonic Ambient",
         "uiTheme": "vs-dark",
         "path": "./themes/astigmatism-easy-day-theme.json"
       },
       {
-        "label": "AstigmatismEasy Infrared",
+        "label": "AstigmatismEasy Infrared — Deep-IR",
         "uiTheme": "vs-dark",
         "path": "./themes/astigmatism-easy-infrared-theme.json"
+      },
+      {
+        "label": "AstigmatismEasy Infrared — Scotopic Calm",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-infrared-scotopic-theme.json"
+      },
+      {
+        "label": "AstigmatismEasy Infrared — Mesopic Focus",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-infrared-mesopic-theme.json"
+      },
+      {
+        "label": "AstigmatismEasy Infrared — Photopic Clarity",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-infrared-photopic-theme.json"
+      },
+      {
+        "label": "AstigmatismEasy Purkinje Violet — Twilight Contrast",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-purkinje-violet-theme.json"
+      },
+      {
+        "label": "AstigmatismEasy Mesopic Moss — Ambient Balance",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-mesopic-moss-theme.json"
+      },
+      {
+        "label": "AstigmatismEasy Photopic Ember — High-Ambient Comfort",
+        "uiTheme": "vs-dark",
+        "path": "./themes/astigmatism-easy-photopic-ember-theme.json"
       }
     ]
   },
-  "license": "MIT",
-  "scripts": {
-    "vscode:package": "vsce package"
-  },
-  "devDependencies": {
-    "vsce": "^2.15.0"
-  }
+  "license": "MIT"
 }
