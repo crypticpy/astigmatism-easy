@@ -1,28 +1,25 @@
 # AstigmatismEasy Theme
 
-A scientifically-optimized VS Code theme for developers with astigmatism and age-related vision decline. Available in **Night**, **Daylight**, and the new **Infrared** variant to support your entire coding workflow. The Night version is specifically designed for coding in low-light environments, especially beneficial for those wearing prismatic neuro lens glasses, the Daylight version provides enhanced visibility and comfort in brighter conditions, and the Infrared variant delivers an almost entirely red-shifted experience for ultra-low-light sessions.
+A scientifically-optimized suite of VS Code themes for developers with astigmatism, neuro-lens corrections, and age-related vision decline. AstigmatismEasy now includes multiple physiologically informed color families and adaptive luminance profiles so you can match both ambient lighting and display technology without sacrificing eye comfort.
 
-> _Screenshot omitted to keep the repository free of binary assets required by some contribution workflows._
+![AstigmatismEasy Night Theme Preview](https://github.com/yourusername/astigmatism-easy/raw/main/images/night-theme-preview.png)
+*Replace with actual Night theme preview image and correct path*
 
-## 🌓 Theme Variants
+![AstigmatismEasy Daylight Theme Preview](https://github.com/yourusername/astigmatism-easy/raw/main/images/daylight-theme-preview.png)
+*Replace with actual Daylight theme preview image and correct path*
 
-AstigmatismEasy now comes in three variants to support your entire coding workflow:
+## 🌓 Theme Families & Adaptive Profiles
 
-### Night Theme
-Optimized for low-light environments, the Night theme preserves dark adaptation and minimizes halation effects that are particularly problematic for developers with astigmatism when working in the dark. It uses the original deep contrast and color calibrations ideal for minimal ambient light.
+The theme collection now ships with six scientifically curated families, each tuned for a specific visual scenario. Infrared, Night, and Daylight also include adaptive luminance profiles so you can fine-tune contrast without manually editing JSON files.
 
-### Infrared Theme (NEW)
-Designed for extremely low ambient light (think planetarium, observatory, or red-room conditions), the Infrared theme keeps the entire UI—chrome, diagnostics, and syntax—within carefully tuned reds, corals, and peaches. Key characteristics include:
-- Deeper oxblood background (`#140707`) with softened transparency to maintain OLED smoothness without producing hard edges.
-- Rose-beige body text (`#F2D6C9`) and a full syntax palette of crimson, salmon, and peach hues that stay legible without injecting blue light.
-- Diagnostics, terminal colors, and focus states recast in ember tones so the whole workspace remains red-shifted for long sessions without disrupting dark adaptation.
+- **Night — Halation Guard**: Refined version of the original warm palette. Soft micro-textured chrome, halo-controlled highlights, and tuned diagnostics for pure dark environments and OLED panels.
+- **Daylight — Harmonic Ambient**: Brighter UI shells and increased secondary text luminance to remain legible in mixed or brighter rooms while retaining the low-blue baseline of the night palette.
+- **Infrared — Deep‑IR / Scotopic Calm / Mesopic Focus / Photopic Clarity**: Red-spectrum variants designed for late-night workflows. Pick Scotopic for maximal dark adaptation, Mesopic for evening ambient light, or Photopic when switching under brighter conditions without leaving the warm infrared colorway.
+- **Purkinje Violet — Twilight Contrast**: Violet-rose hues anchored to the Purkinje shift for twilight hours, offering additional chroma variety without introducing blue glare.
+- **Mesopic Moss — Ambient Balance**: Green/olive family tuned for day-to-dusk transitions, balancing rod and cone stimulation to reduce accommodative stress in variable lighting.
+- **Photopic Ember — High-Ambient Comfort**: Amber/orange spectrum optimized for high-luminance workspaces and crisp mini-LED displays where glare control is critical.
 
-### Daylight Theme
-The Daylight theme adapts the core scientific principles for use in rooms with more ambient light while remaining a dark theme. It features:
-- Slightly lighter backgrounds for surrounding UI elements (like the Sidebar and Status Bar) for better visual separation from the editor in brighter conditions.
-- Increased opacity and/or brightness for many secondary text elements (e.g., inactive line numbers, inlay hints, muted UI text) to improve their legibility against more ambient light.
-- Maintained warm color palette and core editor syntax highlighting to reduce eye strain, even in brighter settings.
-- Optimized overall UI contrast for readability without introducing glare, ensuring the theme remains comfortable for extended periods.
+Each profile keeps ΔL* spacing within 6–8 between major UI planes to avoid bloom, and terminal/editor separations are intentionally larger so context switching remains effortless. Reload the theme after installing to see all variants in the command palette.
 
 ## 🔬 The Science Behind These Themes
 
@@ -30,12 +27,12 @@ This theme is based on extensive vision science research and addresses several k
 
 ### Low-Light Vision & Dark Adaptation
 
-When working in dark environments, your eyes rely more on rod cells (scotopic vision) rather than cone cells. Rods are more sensitive to light but don't perceive color as well, and they undergo the Purkinje shift – becoming more sensitive to blue-green wavelengths as light dims. This is especially critical for the Night theme, but the principles of using warm colors and minimizing blue light benefit both variants by reducing overall eye strain.
+When working in dark environments, your eyes rely more on rod cells (scotopic vision) rather than cone cells. Rods are more sensitive to light but don't perceive color as well, and they undergo the Purkinje shift – becoming more sensitive to blue-green wavelengths as light dims. This is especially critical for the Halation Guard and Infrared profiles, but the principles of using warm colors and minimizing blue light benefit every variant by reducing overall eye strain.
 
 **Our solution:**
-- Uses predominantly warm colors (reds, oranges, yellows) for interface elements.
+- Uses predominantly warm colors (reds, oranges, yellows) for interface elements across the family.
 - Minimizes blue light that disrupts rhodopsin (the chemical responsible for night vision).
-- Creates a balanced palette that preserves dark-adapted vision acuity (Night theme) and reduces general eye fatigue (both themes).
+- Creates a balanced palette that preserves dark-adapted vision acuity in night-oriented profiles while reducing general eye fatigue in brighter variants.
 
 ### Astigmatism, Contrast Sensitivity, and Glasses Wearers
 
@@ -47,9 +44,9 @@ Astigmatism causes light to focus unevenly, leading to blurred or ghosted vision
 - Maintains optimal contrast ratios (typically 5:1 to 11:1) for all text elements, ensuring readability without excessive brightness that could exacerbate glare or halation.
 - Avoids extreme contrast boundaries that worsen astigmatic haloing and can be particularly distracting when viewed through corrective lenses.
 
-### Scientific Color Selection (Night & Daylight Editors)
+### Scientific Color Selection (Core Editor)
 
-Every color in these themes has been chosen based on vision science principles. The following table reflects the core syntax highlighting colors against the editor background, consistent across both Night and Daylight versions for the main coding area:
+Every color in this suite has been chosen based on vision science principles. The following table reflects the base syntax palette used by the Halation Guard profile; other families shift hue and luminance while preserving the same contrast goals:
 
 | Element  | Color   | Contrast (vs #282828) | Scientific Rationale                                                              |
 |----------|---------|-----------------------|-----------------------------------------------------------------------------------|
@@ -59,21 +56,6 @@ Every color in these themes has been chosen based on vision science principles. 
 | Strings  | #8EC07C | 7.0:1                 | Green-teal is easier to focus than blue while remaining distinguishable           |
 | Numbers  | #D3869B | 6.0:1                 | Desaturated purple provides contrast without excessive brightness                 |
 | Comments | #BDAE93 | 6.3:1                 | Intentionally lower contrast for deemphasis while remaining legible & warm         |
-### Infrared Variant Palette
-
-The Infrared theme retains the same ergonomic philosophy while shifting every accent toward the red spectrum:
-
-| Element  | Color   | Contrast (vs #140707) | Scientific Rationale |
-|----------|---------|-----------------------|----------------------|
-| Background | #140707 | - | Deep oxblood keeps luminance extremely low without going pitch black |
-| Text     | #F2D6C9 | 14.3:1 | Rose-beige foreground keeps glyphs clear while avoiding blue components |
-| Keywords | #FF6B6B | 7.1:1 | Crimson keywords provide emphasis without harsh saturation |
-| Strings  | #FF9E80 | 9.8:1 | Salmon-peach strings preserve readability while staying in warm wavelengths |
-| Numbers  | #F28CA5 | 8.5:1 | Dusty rose numerics separate literals without bright halos |
-| Functions | #FFB4A2 | 11.6:1 | Peach-toned functions maintain hierarchy and strong contrast |
-| Types    | #FF9780 | 9.4:1 | Coral types highlight structure while keeping the palette cohesive |
-| Comments | #C69A92 | 7.9:1 | Muted clay comments stay legible yet comfortably subdued |
-
 
 ## ✨ Optimized for Mini LED & OLED at High Refresh Rates
 
@@ -113,7 +95,7 @@ This theme includes specific optimizations for developers using high-end display
 
 ## 🎨 Color Palette (Core)
 
-The Night and Daylight themes use a carefully calibrated warm color palette for core syntax highlighting (the Infrared palette is detailed above):
+The theme uses a carefully calibrated warm color palette for core syntax highlighting:
 
 - **Background**: `#282828` (very dark warm gray)
 - **Text**: `#EBDBB2` (warm beige)
@@ -125,7 +107,14 @@ The Night and Daylight themes use a carefully calibrated warm color palette for 
 - **Types/Classes**: `#FABD2F` (golden yellow)
 - **Functions**: `#B8BB26` (olive green)
 
-*UI chrome elements in the Daylight theme use slightly adjusted background shades (e.g., `#32302F`) and opacities for better daytime visibility, while maintaining the overall warm aesthetic.*
+*UI chrome elements in the Daylight, Mesopic Moss, and Photopic Ember themes use slightly brighter background shades while Purkinje Violet and Infrared profiles employ deeper overlays to limit bloom, all while maintaining the warm aesthetic.*
+
+## 🧰 Adaptive Tooling & Utilities
+
+- **Profile generator**: The repository includes `tools/build_theme_variants.py`, which rebuilds every variant and adaptive profile from the Infrared baseline. Run it after tweaking palettes to keep all JSON files in sync.
+- **Temporal comfort pack**: `extras/infrared-temporal-settings.json` bundles cursor, scrolling, and font metrics tuned for Neurolens and high-refresh displays. Drop it into your `settings.json` and adjust as needed per profile.
+- **Contrast audit**: `tools/contrast_report.py` measures WCAG-style contrast ratios and ΔL* spacings for editor/terminal pairs to verify that customizations stay within our 5:1–11:1 target window.
+- **Ambient switching**: Each family appears in the VS Code theme picker (e.g., “AstigmatismEasy Infrared — Mesopic Focus”). Switch variants as ambient light changes rather than altering display brightness mid-session.
 
 ## 📋 Installation
 
@@ -138,8 +127,8 @@ The Night and Daylight themes use a carefully calibrated warm color palette for 
 3.  Search for "AstigmatismEasy"
 4.  Click Install
 5.  Select your preferred theme variant:
-    *   File > Preferences > Color Theme > **AstigmatismEasy Night**
-    *   File > Preferences > Color Theme > **AstigmatismEasy Daylight**
+    *   File > Preferences > Color Theme > **AstigmatismEasy Night — Halation Guard**
+    *   …or switch among **Infrared (Scotopic/Mesopic/Photopic)**, **Daylight — Harmonic Ambient**, **Purkinje Violet — Twilight Contrast**, **Mesopic Moss — Ambient Balance**, and **Photopic Ember — High-Ambient Comfort** depending on your environment.
 
 #### Manual Installation
 
@@ -148,9 +137,7 @@ The Night and Daylight themes use a carefully calibrated warm color palette for 
     *   Windows: `%USERPROFILE%\.vscode\extensions`
     *   macOS/Linux: `~/.vscode/extensions`
 3.  Restart VS Code.
-4.  Select your preferred theme variant:
-    *   File > Preferences > Color Theme > **AstigmatismEasy Night**
-    *   File > Preferences > Color Theme > **AstigmatismEasy Daylight**
+4.  Select your preferred theme variant from the command palette (same names as above).
 
 ### JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.)
 
@@ -204,6 +191,8 @@ For optimal experience with AstigmatismEasy in VS Code, consider these additiona
   "terminal.integrated.smoothScrolling": true
 }
 ```
+
+For a plug-and-play preset aligned with the Infrared profiles, import the `extras/infrared-temporal-settings.json` file and then layer any project-specific overrides on top.
 
 ### JetBrains IDEs
 
